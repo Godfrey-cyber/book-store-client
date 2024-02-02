@@ -40,7 +40,7 @@
   }
   /*=========================BestSelling==================*/
   .best_div {
-    @apply hover:animate-pulse relative flex flex-col space-y-1 h-96 w-40 lg:w-44 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
+    @apply hover:animate-pulse relative flex flex-col space-y-1 h-96 w-40 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
   }
   .best_img {
     @apply w-full h-72 bg-cover transition-all delay-300
@@ -67,7 +67,7 @@
   }
   /*===================mainsection====================*/
   .mainsection_span {
-    @apply absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 flex flex-col items-center space-y-6 w-1/2 mx-auto text-2xl font-light
+    @apply absolute top-1/2 right-1/2 -translate-y-1/2 translate-x-1/2 flex flex-col items-center space-y-6 w-3/4 lg:w-1/2 mx-auto  font-light
   }
   /*======================morebooks=======================*/
   .category_span {
