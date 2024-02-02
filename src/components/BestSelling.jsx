@@ -52,7 +52,7 @@ const BestSelling = () => {
 		getBooks()
 	}, [])
 	return (
-		<section className="flex flex-col bg-red-50">
+		<section className="flex flex-col bg-red-500">
 			{/*title*/}
 			<p className="flex text-lg font-semibold md:text-xl lg:text-3xl w-full text-gray-700 justify-center mx-auto text-center py-8 md:py-12 lg:py-16">Best Selling Books Ever</p>
 			{/*//NOVELS*/}
