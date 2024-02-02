@@ -70,7 +70,7 @@ const BookPage = () => {
 	console.log(arr)
 	useEffect(() => {
 		const getBook = async() => {
-			try {https://my-book-store-1oki.onrender.com
+			try {
 				const response = await axios.get(`https://my-book-store-1oki.onrender.com/api/v1/books/getBook/${id}`)
 				if (response.status === 200 || response.statusText === 'OK') {
 					setBook(response.data.data)
