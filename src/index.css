@@ -5,10 +5,10 @@
 @layer components {
   /*==========large header=============*/
   .large_header {
-    @apply transition delay-300 flex h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-20 overflow-x-hidden
+    @apply transition delay-300 flex h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-8 lg:px-20 overflow-x-hidden
   }
   .search_div {
-    @apply flex justify-between items-center rounded-3xl border border-gray-500 w-96 h-11 p-1
+    @apply flex justify-between items-center rounded-3xl border border-gray-500 w-96 h-fit p-1
   }
   .search_input {
     @apply w-full h-full outline-none border-none rounded-3xl bg-transparent px-3 text-sm font-light text-gray-600
