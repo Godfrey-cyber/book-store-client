@@ -12,7 +12,7 @@ const Book = ({book}) => {
 			</span>q*/}
 			<div className="flex flex-col space-y-.5 px-2">
 				<p className="text-sm font-medium text-gray-700 truncate">{book?.title.length > 20 ? book.title?.slice(0, 20)+ '...' : book.title}</p>
-				<p className="text-sm font-light text-gray-500">{!book.author ? "J. R Rain" : book.author}</p>
+				<p className="text-sm font-light text-gray-500 truncate">{!book.author ? "J. R Rain" : book.author}</p>
 				<span className="flex items-center">
 					<FaStar className="best_icons" />
 					<FaStar className="best_icons" />
