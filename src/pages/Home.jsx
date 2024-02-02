@@ -10,8 +10,8 @@ import Featured from '../components/Featured.jsx'
 
 const Home = () => {
 	return (
-		<div className="flex flex-col overlow-x-hidden w-full">
-			<div className="sticky top-0 left-0 z-10 overlow-x-hidden">
+		<div className="flex flex-col w-full">
+			<div className="sticky top-0 left-0 z-10">
 				<SmallHeader />
 				<LargeHeader />
 			</div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainSection = () => {
 	return (
-		<section className="relative w-full bg-red-50 h-[84vh] overflow-x-hidden">
+		<section className="relative w-full bg-red-50 h-[84vh]">
 			<div className=" bg-white mx-auto w-4/5 h-full">
 				<span className=" w-full h-full">
 					<img className="w-full h-full bg-contain bg-no-repeat bg-center" src="https://149502452.v2.pressablecdn.com/wp-content/uploads/2020/11/the-dichotomy-of-leadership-book-01-1-2048x1152.jpeg" alt="" />
