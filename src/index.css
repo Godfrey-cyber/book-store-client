@@ -5,7 +5,7 @@
 @layer components {
   /*==========large header=============*/
   .large_header {
-    @apply transition delay-300 flex h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-8 lg:px-20
+    @apply transition delay-300 flex h-[65px] lg:h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-8 lg:px-20
   }
   .search_div {
     @apply flex justify-between items-center rounded-3xl border border-gray-500 w-96 h-fit p-1
@@ -17,7 +17,7 @@
     @apply hover:text-red-600 text-red-500 transition delay-300 text-2xl font-light cursor-pointer mr-3
   }
   .signin_btn {
-    @apply text-sm font-medium border border-red-400 hover:divide-red-500 hover:bg-white text-white rounded-3xl bg-red-400 rounded-3xl hover:text-red-500 px-5 py-2 transition-all delay-300 ease-in-out duration-300 cursor-pointer
+    @apply text-sm font-medium border border-red-400 hover:divide-red-500 hover:bg-white text-white rounded-3xl bg-red-400 rounded-3xl hover:text-red-500 px-3 lg:px-5 py-1 lg:py-2 transition-all delay-300 ease-in-out duration-300 cursor-pointer
   }
   .cta_icon {
     @apply hover:text-red-600 text-red-500 transition delay-300 text-2xl font-light cursor-pointer mr-3
@@ -40,7 +40,7 @@
   }
   /*=========================BestSelling==================*/
   .best_div {
-    @apply hover:animate-pulse relative flex flex-col space-y-1 h-96 w-44 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300
+    @apply hover:animate-pulse relative flex flex-col space-y-1 h-96 w-44 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
   }
   .best_img {
     @apply w-full h-72 bg-cover transition-all delay-300
