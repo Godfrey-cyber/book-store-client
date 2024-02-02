@@ -187,7 +187,7 @@
     @apply flex justify-center items-center cursor-pointer rounded-full  bg-red-400 h-9 w-9 text-center
   }
   .largeheader_div {
-    @apply flex-col space-y-2 rounded-md bg-white shadow shadow-gray-200 min-h-[400px] min-w-[400px] absolute top-14 p-4
+    @apply flex-col space-y-2 rounded-md bg-white shadow shadow-gray-200 h-fit min-w-[400px] absolute top-14 p-4
   }
   .largeheader_span {
     @apply flex items-center w-full h-8 border-b border-gray-400
