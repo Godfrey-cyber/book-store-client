@@ -45,8 +45,8 @@ const MoreBooks = () => {
 		getBooks()
 	}, [])
 	return (
-		<section className="flex flex-col w-full gap-y-6 bg-white h-fit py-4">
-			<div className="w-4/5 mx-auto items-center">
+		<section className="flex flex-col w-full gap-y-6 bg-white h-auto py-4">
+			<div className="w-4/5 mx-auto items-center h-full">
 				<div className="flex-col lg:flex justify-between bg-red-transparent items-center w-full py-4">
 					<span className="">
 						<p className="text-2xl font-semibold text-gray-700 text-center ">Latest Published items</p>
