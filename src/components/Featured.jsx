@@ -30,7 +30,7 @@ const Featured = () => {
 								<img className="w-full h-full bg-cover" src={book.photo} alt="" />
 							</div>
 							<div className="flex flex-col space-y-4 ">
-								<p className="text-3xl font-semibold text-white">{book.title}</p>
+								<p className="text-lg lg:text-3xl font-semibold text-white">{book.title}</p>
 								<p className="text-sm font-light text-white">By {book.author}</p>
 								<p className="text-2xl font-semibold text-white">Ksh. {book.price}</p>
 								<div className="flex space-x-3 items-center">
