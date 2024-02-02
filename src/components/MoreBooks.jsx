@@ -58,7 +58,7 @@ const MoreBooks = () => {
 					</div>
 				</div>
 			</div>
-			<div className="flex text-lg font-semibold md:text-xl lg:text-3xl w-full text-gray-700 justify-center mx-auto text-center py-8 md:py-12 lg:py-16">
+			<div className="best_book">
 				{books && books.slice(6, 16).map(book => (
 					<Book key={book._id} book={book} />
 				))}
