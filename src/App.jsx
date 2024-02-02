@@ -23,7 +23,7 @@ import './App.css'
 function App() {
 	
   return (
-    <section className="min-h-screen font-['Montserrat'] scroll-smooth overflow-x-hidden w-screen">
+    <section className="min-h-screen font-['Montserrat'] scroll-smooth w-screen">
     <ToastContainer />
      <BrowserRouter>
 	    <Routes>
