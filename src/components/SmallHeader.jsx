@@ -9,7 +9,7 @@ const SmalHeader = () => {
 		<section className="flex justify-between items-center w-full bg-gray-200 px-20 h-[40px] overflow-x-hidden">
 			{/*<div className=" w-full">*/}
 				{/*//media & time*/}
-				<div className="flex justify-between items-center space-x-3">
+				<div className="flex justify-between items-center space-x-3 overflow-x-hidden">
 					<span className="flex space-x-2 text-gray-500 text-sm items-center">
 						<IoMdTime className="media_icon hover:text-red-600" />
 						<p className="text-sm font-light text-gray-600">Openning Hours 10.00 am - 6.00 pm</p>	
@@ -24,7 +24,7 @@ const SmalHeader = () => {
 				{/*SELL A BOOK*/}
 				<p onClick={() => navigate("/upload_book")} className="sell_book">Sell a book</p>
 				{/*//cta*/}
-				<div className="flex space-x-3 px-20 items-center">
+				<div className="flex space-x-3 px-20 items-center overflow-x-hidden">
 					<span className="cta_media">
 						<FaPhoneAlt className="hover:text-red-600 media_icon" />
 						<p className="text-sm font-light text-gray-600">reallygreat@gmail.com</p>	 

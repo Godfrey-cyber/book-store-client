@@ -66,7 +66,7 @@ const LargeHeader = () => {
 	        	</span>
         	</div>
 	        {/*SEARCH*/}
-	        <div className="flex flex-col relative">
+	        <div className="flex flex-col relative overflow-x-hidden">
 		        <div className="search_div">
 		        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 		        	<FaSearch className="search_icon" />
@@ -88,7 +88,7 @@ const LargeHeader = () => {
 		    }
 	        </div>
 	        {/*CTA'S*/}
-	        <div className="flex space-x-4 items-center">
+	        <div className="flex space-x-4 items-center overflow-x-hidden">
 	        	<p className="cta_p">FAQ</p>
 	        	<p className="cta_p">Track Order</p>
 	        	<span onClick={() => navigate("/cart_page")} className="cursor-pointer">
