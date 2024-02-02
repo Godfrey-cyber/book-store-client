@@ -5,7 +5,7 @@
 @layer components {
   /*==========large header=============*/
   .large_header {
-    @apply transition delay-300 flex h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-20
+    @apply transition delay-300 flex h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-20 overflow-x-hidden
   }
   .search_div {
     @apply flex justify-between items-center rounded-3xl border border-gray-500 w-96 h-11 p-1
@@ -147,7 +147,7 @@
     @apply bg-red-400 text-sm text-white font-semibold py-2 rounded-md w-full
   }
   .best_book {
-    @apply w-full px-10 lg:w-4/5 mx-auto items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-y-4 md:gap-3 lg:gap-4 mb-6 lg:mb-12
+    @apply w-full px-10 lg:w-4/5 mx-auto items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-y-4 md:gap-4 lg:gap-4 mb-6 lg:mb-12
   }
   .book_page {
     @apply w-full h-96 my-6 bg-cover group-hover:rounded-t-md transition-all delay-300
