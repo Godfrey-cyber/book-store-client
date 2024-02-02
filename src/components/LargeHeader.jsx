@@ -71,8 +71,8 @@ const LargeHeader = () => {
 		        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 		        	<FaSearch className="search_icon" />
 		        </div>
-		        {searchTerm && <div className="flex-col space-y-2 rounded-md bg-white shadow shadow-gray-200 min-h-[400px] min-w-[400px] absolute top-14 p-4">
-		        	<span className="flex items-center w-full h-8 border-b border-gray-400">
+		        {searchTerm && <div className="largeheader_div">
+		        	<span className="largeheader_span">
 		        		<span className="flex text-sm font-normal text-gray-800">Search results for <p className="text-sm font-semibold text-gray-800 ml-2">"{searchTerm}"</p></span>
 		        	</span>
 		        	{!loading ? searchResults && searchResults.map(book => (

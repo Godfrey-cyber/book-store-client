@@ -35,7 +35,7 @@ const CartPage = () => {
 		dispatch(decrement({id: book._id, count }))
 	}
 
-	// let cartIndex = books.findIndex(bookItem => bookItem._id === action.payload.id)
+	// let cartIndex = books.findIndex(bookItem => bookItem._id === action.payload.id) <-- ignore this
 	
 	console.log(books)
 	return (
@@ -44,15 +44,15 @@ const CartPage = () => {
 			<LargeHeader />
 			<main className="grid grid-cols-12 gap-8 w-4/5 mx-auto">
 				<div className="col-span-8 h-fit my-12 space-y-6">
-					<p className="text-sm font-light font-['Lemon'] text-gray-700 my-4">You have ({(books.length)}) books in your cart</p>
+					<p className="cartpage_div">You have ({(books.length)}) books in your cart</p>
 					{books.length === 0 ?
-					<div className="h-[80vh] col-span-12 lg:col-span-8 w-full flex flex-col space-y-3 px-4 lg:px-20 my-8 mx-auto justify-center items-center">
+					<div className="cartpage_div_2">
                         <span className="h-44 w-44">
                             <img src="https://cdn-icons-png.flaticon.com/128/9841/9841570.png" alt="" width={25} height={15} className="w-full h-full object-contain" />
                         </span>
                         
-                        <p className="text-sm font-normal text-gray-800 text-center">Already have an account? <span onClick={() => navigate("/register")} className="text-sm text-red-400 cursor-pointer hover:text-red-500 transition-all delay-200">Login</span> to see items in your cart</p>
-                        <button onClick={() => navigate("/")} className="w-4/5 text-sm text-white font-normal px-4 py-2 lg:w-2/5 rounded-sm hover:bg-red-500 bg-red-400 transition delay">Start Shopping</button>
+                        <p className="text-sm font-normal text-gray-800 text-center">Already have an account? <span onClick={() => navigate("/register")} className="cartpage_p">Login</span> to see items in your cart</p>
+                        <button onClick={() => navigate("/")} className="cartpage_btn">Start Shopping</button>
                     </div> : books?.map((book, id) => (
 						<div key={id} className="grid grid-cols-12 gap-x-8 border-t border-gray-200 py-4">
 							<div className="col-span-4 h-44 w-28 flex-col">
@@ -63,17 +63,17 @@ const CartPage = () => {
 								<p className="text-sm font-light text-gray-700">{book.title}</p>
 							{/*qty btns*/}
 								<div className="flex items-center border border-gray-200 rounded-md w-max">
-									<button disabled={book.count <= 1} onClick={() => count >= 2 && setCount(count - 1)} onClick={() => dispatch(decrement({id: book._id, count }))} className="items-center flex text-lg text-gray-500 py-2 px-3 hover:text-white transition delay-300 transition delay-300 cursor-pointer rounded-tl-md rounded-bl-md hover:bg-red-200 bg-gray-200">-</button>
+									<button disabled={book.count <= 1} onClick={() => count >= 2 && setCount(count - 1)} onClick={() => dispatch(decrement({id: book._id, count }))} className="cartpage_btn_2">-</button>
 									<span className="items-center flex w-12">
 										<p className="text-sm text-gray-500 mx-auto">{ book.count }</p>
 									</span>
-									<button onClick={() => setCount(count + 1)} onClick={() => dispatch(increment({id: book._id, count }))} className="items-center flex text-lg text-gray-500 py-2 px-3 hover:text-white transition delay-300 transition delay-300 cursor-pointer rounded-tr-md rounded-br-md hover:bg-green-200 bg-gray-200">+</button>
+									<button onClick={() => setCount(count + 1)} onClick={() => dispatch(increment({id: book._id, count }))} className="cartpage_btn_3">+</button>
 								</div>
 								<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
 							</div>
 							<div className="col-span-2 flex-col flex justify-between">
 								<FaRegHeart className="text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer" />
-								<span onClick={() => dispatch(removeFromCart({ id: book._id }))} className="flex justify-center items-center cursor-pointer rounded-full  bg-red-400 h-9 w-9 text-center">
+								<span onClick={() => dispatch(removeFromCart({ id: book._id }))} className="cartpage_x">
 	                            <RxCross2 className="h-4 lg:h-6 w-4 lg:w-6 text-white" />
 	                        </span>
 							</div>

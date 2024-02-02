@@ -125,6 +125,66 @@
   .create_button {
     @apply bg-red-400 text-sm text-white font-semibold py-2 rounded-md w-1/5
   }
+  .form_div {
+    @apply col-span-4 flex-col flex items-center justify-center bg-green-400 h-full
+  }
+  .form {
+    @apply flex flex-col gap-4 mx-auto my-auto w-3/5 max-h-fit bg-white rounded-md shadow-md shadow-white p-4
+  }
+  .form_div {
+    @apply bg-red-400 text-sm text-white font-semibold py-2 rounded-md w-full
+  }
+  .form_icon {
+    @apply mr-2 text-lg text-gray-600 cursor-pointer 
+  }
+  .sign_up_form {
+    @apply col-span-5 flex-col flex items-center justify-center bg-green-400 h-full
+  }
+  .signup_form {
+    @apply flex flex-col gap-4 mx-auto my-auto w-3/5 max-h-fit bg-white rounded-md shadow-md shadow-white p-6
+  }
+  .form_btn_2 {
+    @apply bg-red-400 text-sm text-white font-semibold py-2 rounded-md w-full
+  }
+  .best_book {
+    @apply w-4/5 mx-auto items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-1 md:gap-2 lg:gap-4 mb-12
+  }
+  .book_page {
+    @apply w-full h-96 my-6 bg-cover group-hover:rounded-t-md transition-all delay-400
+  }
+  .book_btn {
+    @apply text-sm text-white font-semibold bg-red-400 border border-red-300 hover:bg-white hover:text-red-400 transition-all delay-400 rounded-3xl px-3 py-2
+  }
+  .btn_buy {
+    @apply text-sm text-red-400 font-semibold bg-white border border-red-300 hover:bg-red-400 hover:text-white transition-all delay-400 rounded-3xl px-3 py-2
+  }
+  .bookpage_div {
+    @apply flex border-t border-b border-gray-400 flex-col space-y-3 w-4/5 mx-auto my-12
+  }
+  .book_reviews {
+    @apply flex border-b border-gray-400 flex-col space-y-3 w-4/5 mx-auto my-6
+  }
+  .cartpage_div {
+    text-sm font-light font-['Lemon'] text-gray-700 my-4
+  }
+  .cartpage_div_2 {
+    h-[80vh] col-span-12 lg:col-span-8 w-full flex flex-col space-y-3 px-4 lg:px-20 my-8 mx-auto justify-center items-center
+  }
+  .cartpage_p {
+    @apply text-sm text-red-400 cursor-pointer hover:text-red-500 transition-all delay-200
+  }
+  .cartpage_btn {
+    @apply w-4/5 text-sm text-white font-normal px-4 py-2 lg:w-2/5 rounded-sm hover:bg-red-500 bg-red-400 transition delay
+  }
+  .cartpage_btn_2 {
+    @apply items-center flex text-lg text-gray-500 py-2 px-3 hover:text-white transition delay-300 transition delay-300 cursor-pointer rounded-tl-md rounded-bl-md hover:bg-red-200 bg-gray-200
+  }
+  .cartpage_btn_2 {
+    @apply items-center flex text-lg text-gray-500 py-2 px-3 hover:text-white transition delay-300 transition delay-300 cursor-pointer rounded-tr-md rounded-br-md hover:bg-green-200 bg-gray-200
+  }
+  .cartpage_x {
+    @apply flex justify-center items-center cursor-pointer rounded-full  bg-red-400 h-9 w-9 text-center
+  }
 }
 
 /*:root {

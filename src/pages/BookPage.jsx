@@ -70,7 +70,7 @@ const BookPage = () => {
 	console.log(arr)
 	useEffect(() => {
 		const getBook = async() => {
-			try {
+			try {https://my-book-store-1oki.onrender.com
 				const response = await axios.get(`https://my-book-store-1oki.onrender.com/api/v1/books/getBook/${id}`)
 				if (response.status === 200 || response.statusText === 'OK') {
 					setBook(response.data.data)
@@ -91,9 +91,9 @@ const BookPage = () => {
 			<LargeHeader />
 			<main className="grid grid-cols-12 gap-x-8 w-4/5 mx-auto my-12 h-fit">
 				<div className="col-span-3 flex flex-col space-y-4 h-full">
-					<img className="w-full h-96 my-6 bg-cover group-hover:rounded-t-md transition-all delay-400" src={book.photo} alt="" />
-					<button className="text-sm text-white font-semibold bg-red-400 border border-red-300 hover:bg-white hover:text-red-400 transition-all delay-400 rounded-3xl px-3 py-2">Read</button>
-					<button disabled={count > 1} className="text-sm text-red-400 font-semibold bg-white border border-red-300 hover:bg-red-400 hover:text-white transition-all delay-400 rounded-3xl px-3 py-2">Buy this book</button>
+					<img className="book_page" src={book.photo} alt="" />
+					<button className="book_btn">Read</button>
+					<button disabled={count > 1} className="btn_buy">Buy this book</button>
 				</div>
 				<div className="col-span-9 flex flex-col space-y-4 h-full w-full px-10">
 					<p className="text-4xl font-normal tex-gray-700">{book.title}</p>
@@ -158,7 +158,7 @@ const BookPage = () => {
 				</div>
 			</main>
 			<BestSelling />
-			<div className="flex border-t border-b border-gray-400 flex-col space-y-3 w-4/5 mx-auto my-12">
+			<div className="bookpage_div">
 				<p className="text-gray-700 font-normal text-3xl">Ratings & Reviews</p>
 				<div className="flex flex-col space-y-3 items-center justify-center">
 					<img className="rounded-full h-12 w-12 bg-cover" src={book.photo} alt={book.photo} />
@@ -179,7 +179,7 @@ const BookPage = () => {
 				</div>
 			</div>
 			{/*community Reviews*/}
-			<div className="flex border-b border-gray-400 flex-col space-y-3 w-4/5 mx-auto my-6">
+			<div className="book_reviews">
 				<p className="text-gray-700 font-normal text-3xl">Community Reviews</p>
 				<div className="flex flex-col space-y-3 justify-center w-full">
 					<div className="flex space-x-5 items-center w-full">

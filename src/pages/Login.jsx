@@ -63,8 +63,8 @@ const Login = () => {
 				<div className="overay absolute top-0 left-0 z-10 w-full h-full"></div>
 				<img className="h-full w-full" src="https://static.theceomagazine.net/wp-content/uploads/2023/04/21094311/books2.jpg" alt="a_random_image_of_a_random_image" />
 			</div>
-			<div className="col-span-4 flex-col flex items-center justify-center bg-green-400 h-full">
-				<form className="flex flex-col gap-4 mx-auto my-auto w-3/5 max-h-fit bg-white rounded-md shadow-md shadow-white p-4">
+			<div className="form_div">
+				<form className="form">
 					<span className="flex">
 						<p className="font-['Lemon'] text-xl font-semibold text-gray-800">Sign In here.</p>
 					</span>
@@ -73,7 +73,7 @@ const Login = () => {
 					</span>
 					<span className="input_span">
 						<input onChange={onChange} value={password} name="password" className="input" placeholder='Enter Password' type={!toggle ? "password" : "text"} />
-						{toggle ? <FaRegEyeSlash onClick={togglePassword} className="mr-2 text-lg text-gray-600 cursor-pointer" /> : <FaRegEye onClick={togglePassword} className="mr-2 text-lg text-gray-600 cursor-pointer" />}
+						{toggle ? <FaRegEyeSlash onClick={togglePassword} className="form_icon" /> : <FaRegEye onClick={togglePassword} className="form_icon" />}
 					</span>
 					<span className="flex items-center space-x-1">
 						<hr className="border border-gray-500 w-full" />
@@ -95,7 +95,7 @@ const Login = () => {
 						</span>
 					</div>
 					{error && <p className="text-xs font-medium text-red-400">{userError}</p>}
-					<button onClick={handleSubmit} type="submit" className="bg-red-400 text-sm text-white font-semibold py-2 rounded-md w-full">Login</button>
+					<button onClick={handleSubmit} type="submit" className="form_btn">Login</button>
 					<div className="text-xs font-normal text-gray-700">Don't have an account? <span onClick={() => navigate('/sign_up')} className="text-red-400 hover:underline cursor-pointer">Sign Up</span></div>
 				</form>
 			</div>
