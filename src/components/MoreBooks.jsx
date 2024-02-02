@@ -51,7 +51,7 @@ const MoreBooks = () => {
 					<span className="">
 						<p className="text-2xl font-semibold text-gray-700 text-center ">Latest Published items</p>
 					</span>
-					<div className="space-y-2 lg:flex flex-wrap space-x-2 items-center">
+					<div className="space-y-2 lg:flex flex-wrap space-x-2 items-center h-auto">
 						{categories.length > 0 && categories.slice(0, 5).map(category => (
 							<span key={category._id} className="category_span">{category.title}</span>
 						))}
