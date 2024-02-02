@@ -21,9 +21,9 @@ const Featured = () => {
 		getBooks()
 	}, [])
 	return (
-		<section className="h-[66vh] w-4/5 mx-auto my-24">
-			<div className="grid grid-cols-12 gap-6 h-4/5">
-				<div className="col-span-8 bg-red-500 p-4 flex space-x-4 items-center">
+		<section className="max-h-fit lg:h-[66vh] w-4/5 mx-auto my-24">
+			<div className="grid grid-cols-12 gap-4 lg:gap-6 h-4/5">
+				<div className="col-span-12 lg:col-span-8 bg-red-500 p-4 flex space-x-4 items-center">
 					{books && books.slice(0, 1).map(book => (
 						<div key={book._id} className="flex items-center space-x-8">
 							<div className="featured_div">
@@ -48,7 +48,7 @@ const Featured = () => {
 						</div>
 					))}
 				</div>
-				<div className="col-span-4 bg-contain p-2">
+				<div className="col-span-12 lg:col-span-4 bg-contain p-2">
 					<img className="w-full h-full bg-cover" src="https://enterprisersproject.com/sites/default/files/2020_book_list.png" alt="" />
 				</div>
 			</div>
