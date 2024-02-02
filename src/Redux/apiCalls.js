@@ -14,6 +14,12 @@ export const login = async (dispatch, user) => {
 	} catch (err) {
 		dispatch(loginFailure())
 		console.log(err.response.data.msg)
+
+		if (err || !res.status === 200 || !res.statusText === 'OK') {
+			dispatch(loginFailure(err?.response?.data.msg))
+			// setFormData({email: "", password: ""})
+			// toast.error(err?.response?.data?.msg)
+		}
 	}
 }
 

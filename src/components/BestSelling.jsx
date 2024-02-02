@@ -54,9 +54,9 @@ const BestSelling = () => {
 	return (
 		<section className="flex flex-col w-full bg-red-50">
 			{/*title*/}
-			<p className="text-3xl font-semibold text-gray-700 text-center py-16">Best Selling Books Ever</p>
+			<p className="text-sm md:text-lg lg:text-3xl font-normal md:font-semibold text-gray-700 text-center py-8 md:py-12 lg:py-16">Best Selling Books Ever</p>
 			{/*//NOVELS*/}
-			<div className="w-4/5 mx-auto items-center grid grid-cols-5 gap-4 mb-12">
+			<div className="best_book">
 				{books && books.slice(0, 5).map(book => (
 					<Book key={book._id} book={book} />
 				))}
