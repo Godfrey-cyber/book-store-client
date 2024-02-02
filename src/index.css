@@ -40,7 +40,7 @@
   }
   /*=========================BestSelling==================*/
   .best_div {
-    @apply hover:animate-pulse relative flex flex-col space-y-1 h-80 w-44 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300
+    @apply hover:animate-pulse relative flex flex-col space-y-1 h-80 w-44 lg:h-48 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300
   }
   .best_img {
     @apply w-full h-72 bg-cover transition-all delay-300
