@@ -21,7 +21,7 @@ const Featured = () => {
 		getBooks()
 	}, [])
 	return (
-		<section className="max-h-fit lg:h-[66vh] w-4/5 mx-auto my-24">
+		<section className="h-auto lg:h-[66vh] w-4/5 mx-auto my-24">
 			<div className="grid grid-cols-12 gap-4 lg:gap-6 h-4/5">
 				<div className="col-span-12 lg:col-span-8 bg-red-500 p-4 flex space-x-4 items-center">
 					{books && books.slice(0, 1).map(book => (

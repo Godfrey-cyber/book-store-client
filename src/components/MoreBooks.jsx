@@ -47,11 +47,11 @@ const MoreBooks = () => {
 	return (
 		<section className="flex flex-col w-full gap-y-6 bg-white h-fit py-4">
 			<div className="w-4/5 mx-auto items-center">
-				<div className="flex justify-between bg-red-transparent items-center w-full py-4">
+				<div className="flex-col lg:flex justify-between bg-red-transparent items-center w-full py-4">
 					<span className="">
 						<p className="text-2xl font-semibold text-gray-700 text-center ">Latest Published items</p>
 					</span>
-					<div className="flex space-x-2 items-center">
+					<div className="space-y-2 flex space-x-2 items-center">
 						{categories.length > 0 && categories.slice(0, 5).map(category => (
 							<span key={category._id} className="category_span">{category.title}</span>
 						))}
