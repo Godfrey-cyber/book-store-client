@@ -150,13 +150,13 @@
     @apply w-4/5 mx-auto items-center grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-1 md:gap-2 lg:gap-4 mb-12
   }
   .book_page {
-    @apply w-full h-96 my-6 bg-cover group-hover:rounded-t-md transition-all delay-400
+    @apply w-full h-96 my-6 bg-cover group-hover:rounded-t-md transition-all delay-300
   }
   .book_btn {
-    @apply text-sm text-white font-semibold bg-red-400 border border-red-300 hover:bg-white hover:text-red-400 transition-all delay-400 rounded-3xl px-3 py-2
+    @apply text-sm text-white font-semibold bg-red-400 border border-red-300 hover:bg-white hover:text-red-400 transition-all delay-300 rounded-3xl px-3 py-2
   }
   .btn_buy {
-    @apply text-sm text-red-400 font-semibold bg-white border border-red-300 hover:bg-red-400 hover:text-white transition-all delay-400 rounded-3xl px-3 py-2
+    @apply text-sm text-red-400 font-semibold bg-white border border-red-300 hover:bg-red-400 hover:text-white transition-all delay-300 rounded-3xl px-3 py-2
   }
   .bookpage_div {
     @apply flex border-t border-b border-gray-400 flex-col space-y-3 w-4/5 mx-auto my-12
