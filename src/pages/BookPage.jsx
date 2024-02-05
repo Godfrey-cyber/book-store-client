@@ -91,11 +91,14 @@ const BookPage = () => {
 			<LargeHeader />
 			<main className="grid grid-cols-12 gap-x-8 w-full px-8 md:px-12 lg:px-20 mx-auto my-12 h-fit">
 				<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4 h-full">
-					<img className="book_page" src={book.photo} alt="" />
+					{/*<img className="book_page" src={book.photo} alt="" />*/}
+					<div className="lg:col-span-6 h-44 w-28 flex-col">
+						<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
+						</div>
 					<button className="book_btn">Read</button>
 					<button disabled={count > 1} className="btn_buy">Buy this book</button>
 				</div>
-				<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-full w-full px-10">
+				<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-full w-full">
 					<p className="text-4xl font-normal tex-gray-700">{book.title}</p>
 					<p className="text-lg font-light tex-gray-700 cursor-pointer hover:underline">By {book.author}</p>
 					<span className="flex items-center cursor-pointer">
