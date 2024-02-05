@@ -43,7 +43,7 @@ const CartPage = () => {
 			<SmallHeader />
 			<LargeHeader />
 			<main className="grid grid-cols-12 gap-8 w-4/5 mx-auto">
-				<div className="col-span-8 h-fit my-12 space-y-6">
+				<div className="col-span-12 lg:col-span-8 h-fit my-6 lg:my-12 space-y-3 lg:space-y-6">
 					<p className="cartpage_div">You have ({(books.length)}) books in your cart</p>
 					{books.length === 0 ?
 					<div className="cartpage_div_2">
@@ -54,23 +54,27 @@ const CartPage = () => {
                         <p className="text-sm font-normal text-gray-800 text-center">Already have an account? <span onClick={() => navigate("/register")} className="cartpage_p">Login</span> to see items in your cart</p>
                         <button onClick={() => navigate("/")} className="cartpage_btn">Start Shopping</button>
                     </div> : books?.map((book, id) => (
+                		
 						<div key={id} className="grid grid-cols-12 gap-x-8 border-t border-gray-200 py-4">
-							<div className="col-span-4 h-44 w-28 flex-col">
-								<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
-							</div>
-							
-							<div className="col-span-6 flex flex-col justify-between">
-								<p className="text-sm font-light text-gray-700">{book.title}</p>
-							{/*qty btns*/}
-								<div className="flex items-center border border-gray-200 rounded-md w-max">
-									<button disabled={book.count <= 1} onClick={() => count >= 2 && setCount(count - 1)} onClick={() => dispatch(decrement({id: book._id, count }))} className="cartpage_btn_2">-</button>
-									<span className="items-center flex w-12">
-										<p className="text-sm text-gray-500 mx-auto">{ book.count }</p>
-									</span>
-									<button onClick={() => setCount(count + 1)} onClick={() => dispatch(increment({id: book._id, count }))} className="cartpage_btn_3">+</button>
+							<div className="col-span-12 lg:col-span-10 flex-col lg:flex lg:justify-between lg:items-center">
+								<div className="col-span-6 h-44 w-28 flex-col">
+									<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 								</div>
-								<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
-							</div>
+
+								<div className="col-span-12 lg:col-span-4 flex lg:flex-col justify-between">
+									<p className="text-sm font-light text-gray-700">{book.title}</p>
+									
+									<div className="flex items-center border border-gray-200 rounded-md w-max">
+										<button disabled={book.count <= 1} onClick={() => count >= 2 && setCount(count - 1)} onClick={() => dispatch(decrement({id: book._id, count }))} className="cartpage_btn_2">-</button>
+										<span className="items-center flex w-12">
+											<p className="text-sm text-gray-500 mx-auto">{ book.count }</p>
+										</span>
+										<button onClick={() => setCount(count + 1)} onClick={() => dispatch(increment({id: book._id, count }))} className="cartpage_btn_3">+</button>
+									</div>
+									<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
+								</div>
+							</div>	
+
 							<div className="col-span-2 flex-col flex justify-between">
 								<FaRegHeart className="text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer" />
 								<span onClick={() => dispatch(removeFromCart({ id: book._id }))} className="cartpage_x">
@@ -78,6 +82,7 @@ const CartPage = () => {
 	                        </span>
 							</div>
 						</div>
+						
 					))}
 				</div>
 				<div className="col-span-4 h-fit bg-gray-100 flex-col space-y-4 my-12 p-4">
