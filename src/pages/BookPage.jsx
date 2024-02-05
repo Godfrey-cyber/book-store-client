@@ -123,7 +123,7 @@ const BookPage = () => {
 					<button onClick={addBookToCart} className="bookpage_btn">Add to cart</button>
 					}
 				{/*qty buttons*/}
-					<div className="flex items-center border border-gray-200 rounded-md w-max">
+					{/*<div className="flex items-center border border-gray-200 rounded-md w-max">
 						<button disabled={arr <= 1} onClick={handleQtyDec} className="dec_btn">-</button>
 						<span className="items-center flex w-12">
 							<p className="text-sm text-gray-500 mx-auto">{ arr ? arr : 0 }</p>
