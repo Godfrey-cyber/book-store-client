@@ -92,7 +92,7 @@ const BookPage = () => {
 
 
 
-			<main className="grid grid-cols-12 gap-x-8 w-4/5 lg:px-20 md:px-12 px-8 rounded-md mx-auto h-[600px] bg-red-100 my-6">
+			<main className="grid grid-cols-12 md:gap-x-8 gap-y-8 w-full lg:px-20 md:px-12 px-8 rounded-md mx-auto h-[600px] bg-red-100 my-6">
 				<div className="col-span-12 lg:col-span-3 flex-col space-y-4 w-full bg-pink-500 h-44">
 
 				</div>
