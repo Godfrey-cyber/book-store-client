@@ -89,7 +89,10 @@ const BookPage = () => {
 		<section className="w-full h-full bg-white">
 			<SmallHeader />
 			<LargeHeader />
-			<main className="grid grid-cols-12 gap-x-8 w-full px-8 md:px-12 lg:px-20 mx-auto my-12 h-fit">
+
+
+
+			<main className="grid grid-cols-12 gap-x-8 w-full  mx-auto my-12 h-fit">
 				<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4 h-full">
 					{/*<img className="book_page" src={book.photo} alt="" />*/}
 					<div className="h-72 w-36">
@@ -160,6 +163,11 @@ const BookPage = () => {
 					</div>*/}
 				</div>
 			</main>
+
+
+
+
+
 			<BestSelling />
 			<div className="bookpage_div">
 				<p className="text-gray-700 font-normal text-2xl lg:text-3xl">Ratings & Reviews</p>
