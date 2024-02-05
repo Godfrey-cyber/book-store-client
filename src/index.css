@@ -43,7 +43,7 @@
     @apply hover:animate-pulse relative flex flex-col space-y-1 md:h-96 md:w-44 h-72 w-36 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
   }
   .best_img {
-    @apply w-full h-64 md:72 bg-cover transition-all delay-300
+    @apply w-full h-56 md:h-72 bg-cover transition-all delay-300
   }
   .best_icons {
     @apply hidden md:flex text-xs md:text-sm text-red-500
