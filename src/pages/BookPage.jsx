@@ -97,7 +97,7 @@ const BookPage = () => {
 					<div className="h-64 w-40 mx-auto">
 						<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 					</div>
-					<span className="flex-col space-y-3">
+					<span className="flex flex-col space-y-3">
 						<button className="book_btn">Read Now</button>
 						<button disabled={count > 1} className="btn_buy">Buy this book</button>
 					</span>
