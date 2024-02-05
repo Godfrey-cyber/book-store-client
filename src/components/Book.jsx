@@ -22,7 +22,7 @@ const Book = ({book}) => {
 				</span>
 				<span className="flex items-center justify-between">
 					<p className="text-xs font-light text-gray-700">(120 Review)</p>
-					<p className="text-xs font-bold lg:text-lg lg:font-light text-red-500">Ksh. {book.price}</p>
+					<p className="text-xs font-light lg:text-sm lg:font-bold text-red-500">Ksh. {book.price}</p>
 				</span>
 			</div>
 		</div>
