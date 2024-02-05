@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import SmallHeader from "../components/SmallHeader"
+// import {} from '../assets/images'
 import { FaRegHeart } from "react-icons/fa";
 import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
@@ -56,13 +57,13 @@ const CartPage = () => {
                     </div> : books?.map((book, id) => (
                 		
 						<div key={id} className="grid grid-cols-12 gap-x-8 border-t border-gray-200 py-4">
-							{/*<div className="col-span-12 lg:col-span-10 flex-col lg:flex lg:justify-between lg:items-center">*/}
-								<div className="col-span-12 lg:col-span-6 h-44 w-28 flex-col">
+							<div className="col-span-12 lg:col-span-10 flex-col lg:flex lg:justify-between lg:items-center">
+								<div className="lg:col-span-6 h-44 w-28 flex-col">
 									<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 
 								</div>
 
-								<div className="col-span-12 lg:col-span-4 flex lg:flex-col justify-between">
+								<div className="flex lg:flex-col justify-between">
 									<p className="text-sm font-light text-gray-700 truncate">{book.title}</p>
 									<div className="flex items-center border border-gray-200 rounded-md w-max">
 										<button disabled={book.count <= 1} onClick={() => count >= 2 && setCount(count - 1)} onClick={() => dispatch(decrement({id: book._id, count }))} className="cartpage_btn_2">-</button>
@@ -73,7 +74,7 @@ const CartPage = () => {
 									</div>
 									<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
 								</div>
-							{/*</div>	*/}
+							</div>	
 
 							<div className="col-span-2 flex-col flex justify-between">
 								<FaRegHeart className="text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer" />
@@ -85,20 +86,23 @@ const CartPage = () => {
 						
 					))}
 				</div>
-				<div className="col-span-4 h-fit bg-gray-100 flex-col space-y-4 my-12 p-4">
-					<div className="flex-col space-y-4 bg-white w-full p-2 rounded-md">
-						<span className="flex justify-between items-center">
-							<p className="text-lg font-normal text-gray-700 slashed-zero">Subtotal:</p>
-							<p className="text-sm font-['Lemon'] font-normal text-gray-700 slashed-zero">KSH. {total}</p>
-						</span>
-						<span className="flex justify-between items-center">
-							<p className="text-lg font-normal text-gray-700 slashed-zero">Delivery</p>
-							<p className="text-xs font-light text-gray-500 slashed-zero">Depends on location</p>
-						</span>
+				{ books.length === && (
+					<div className="col-span-4 h-fit bg-gray-100 flex-col space-y-4 my-12 p-4">
+						<div className="flex-col space-y-4 bg-white w-full p-2 rounded-md">
+							<span className="flex justify-between items-center">
+								<p className="text-lg font-normal text-gray-700 slashed-zero">Subtotal:</p>
+								<p className="text-sm font-['Lemon'] font-normal text-gray-700 slashed-zero">KSH. {total}</p>
+							</span>
+							<span className="flex justify-between items-center">
+								<p className="text-lg font-normal text-gray-700 slashed-zero">Delivery</p>
+								<p className="text-xs font-light text-gray-500 slashed-zero">Depends on location</p>
+							</span>
+						</div>
+						<button className="bg-red-400 rounded-sm p-4 w-full text-center text-white my-4 font-normal hover:bg-red-500 transition-all delay-300 ">CHECKOUT</button>
+						<p className="text-sm font-normal text-gray-600 slashed-zero">Got a <span className="cursor-pointer text-sm font-normal text-red-400">promo or a discount code</span> we've got you covered</p>
 					</div>
-					<button className="bg-red-400 rounded-sm p-4 w-full text-center text-white my-4 font-normal hover:bg-red-500 transition-all delay-300 ">CHECKOUT</button>
-					<p className="text-sm font-normal text-gray-600 slashed-zero">Got a <span className="cursor-pointer text-sm font-normal text-red-400">promo or a discount code</span> we've got you covered</p>
-				</div>
+				)
+			}
 			</main>
 		</section>
 	)
