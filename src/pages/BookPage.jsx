@@ -145,7 +145,7 @@ const BookPage = () => {
 						<p className="text-gray-700 font-light">{book.pages}</p>
 						<p className="text-red-500 font-light hover:underline">pages, Hardcover</p>
 					</span>
-					<div className="flex flex-col space-y-4 my-8 w-1/2">
+					<div className="flex flex-col space-y-4 my-8 w-full lg:w-1/2">
 						<p className="text-gray-700 font-semibold text-md">This edition</p>
 						<span className="flex items-center justify-between">
 							<p className="book_desc">Format</p>
