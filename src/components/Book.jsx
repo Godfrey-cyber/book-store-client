@@ -11,9 +11,9 @@ const Book = ({book}) => {
 				<MdAddShoppingCart className="text-lg ml-1" />
 			</span>q*/}
 			<div className="flex flex-col space-y-.5 px-2">
-				<p className="text-sm font-medium text-gray-700 truncate">{book?.title.length > 19 ? book.title?.slice(0, 19)+ '...' : book.title}</p>
-				<p className="text-sm font-light text-gray-500 truncate">{!book.author ? "J. R Rain" : book.author.length > 18 ? book.author.slice(0, 18)+ '...' : book.author}</p>
-				<span className="flex items-center">
+				<p className="text-xs md:text-sm font-normal md:font-medium text-gray-700 truncate">{book?.title.length > 19 ? book.title?.slice(0, 19)+ '...' : book.title}</p>
+				<p className="text-xs md:text-sm font-light text-gray-500 truncate">{!book.author ? "J. R Rain" : book.author.length > 18 ? book.author.slice(0, 18)+ '...' : book.author}</p>
+				<span className="flex items-center hidden lg:flex">
 					<FaStar className="best_icons" />
 					<FaStar className="best_icons" />
 					<FaStar className="best_icons" />
