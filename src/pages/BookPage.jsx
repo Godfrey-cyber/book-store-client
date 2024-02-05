@@ -92,9 +92,8 @@ const BookPage = () => {
 
 
 
-			<main className="grid grid-cols-12 gap-x-8 w-full px-8 mx-auto my-12 h-fit">
-				<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4 h-full">
-					{/*<img className="book_page" src={book.photo} alt="" />*/}
+			<main className="grid grid-cols-12 gap-x-8 w-full px-8 mx-auto my-12 h-[600px] bg-red-100">
+				{/*<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4 h-full">
 					<div className="h-64 w-40 mx-auto">
 						<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 						</div>
@@ -158,10 +157,7 @@ const BookPage = () => {
 							<p className="book_desc">English</p>
 						</span>
 					</div>
-					{/*<div className="flex flex-col space-y-4 border-b border-gray-700">
-						<p className="text-gray-700 font-semibold text-md">About the Author</p>
-					</div>*/}
-				</div>
+				</div>*/}
 			</main>
 
 
