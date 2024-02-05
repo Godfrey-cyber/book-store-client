@@ -93,13 +93,14 @@ const BookPage = () => {
 
 
 			<main className="grid grid-cols-12 md:gap-x-8 gap-y-8 w-full lg:px-20 px-4 md:px-8 rounded-md mx-auto h-[600px] bg-red-100 my-6">
-				<div className="col-span-12 lg:col-span-3 flex-col space-y-4 w-full bg-pink-500 h-44">
+				<div className="col-span-12 lg:col-span-3 flex items-center justify-between lg:flex-col space-y-4 w-full h-fit">
 					<div className="h-64 w-40 mx-auto">
 						<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
-						</div>
+					</div>
 					<button className="book_btn">Read</button>
 					<button disabled={count > 1} className="btn_buy">Buy this book</button>
 				</div>
+
 				<div className="col-span-12 lg:col-span-9 flex-col space-y-4 w-full bg-pink-500 h-44">
 					
 				</div>
