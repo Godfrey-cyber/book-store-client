@@ -89,13 +89,13 @@ const BookPage = () => {
 		<section className="w-full h-full bg-white">
 			<SmallHeader />
 			<LargeHeader />
-			<main className="grid grid-cols-12 gap-x-8 w-4/5 mx-auto my-12 h-fit">
-				<div className="col-span-3 flex flex-col space-y-4 h-full">
+			<main className="grid grid-cols-12 gap-x-8 w-full px-8 md:px-12 lg:px-20 mx-auto my-12 h-fit">
+				<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4 h-full">
 					<img className="book_page" src={book.photo} alt="" />
 					<button className="book_btn">Read</button>
 					<button disabled={count > 1} className="btn_buy">Buy this book</button>
 				</div>
-				<div className="col-span-9 flex flex-col space-y-4 h-full w-full px-10">
+				<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-full w-full px-10">
 					<p className="text-4xl font-normal tex-gray-700">{book.title}</p>
 					<p className="text-lg font-light tex-gray-700 cursor-pointer hover:underline">By {book.author}</p>
 					<span className="flex items-center cursor-pointer">
@@ -159,36 +159,36 @@ const BookPage = () => {
 			</main>
 			<BestSelling />
 			<div className="bookpage_div">
-				<p className="text-gray-700 font-normal text-3xl">Ratings & Reviews</p>
+				<p className="text-gray-700 font-normal text-2xl lg:text-3xl">Ratings & Reviews</p>
 				<div className="flex flex-col space-y-3 items-center justify-center">
 					<img className="rounded-full h-12 w-12 bg-cover" src={book.photo} alt={book.photo} />
-					<p className="text-gray-700 font-normal text-3xl">What do you think?</p>
-					<div className="flex space-x-5 items-center">
+					<p className="text-gray-700 font-normal text-2xl lg:text-3xl">What do you think?</p>
+					<div className="flex-col lg:flex space-x-5 items-center">
 						<div className="flex-col space-y-3">
 							<span className="flex items-center cursor-pointer">
-								<FaStar className="text-3xl text-red-500" />
-								<FaStar className="text-3xl text-red-500" />
-								<FaStar className="text-3xl text-red-500" />
-								<FaStar className="text-3xl text-red-500" />
+								<FaStar className="text-2xl lg:text-3xl text-red-500" />
+								<FaStar className="text-2xl lg:text-3xl text-red-500" />
+								<FaStar className="text-2xl lg:text-3xl text-red-500" />
+								<FaStar className="text-2xl lg:text-3xl text-red-500" />
 								<FaStarHalfStroke className="text-3xl text-red-500" />
 							</span>
 							<p className="text-gray-700 font-light text-xs">Rate this book</p>
 						</div>
-						<button className="bg-red-400 text-white rounded-full px-5 py-2">Write a Review</button>
+						<button className="bg-red-400 text-white rounded-full px-3 lg:px-5 py-2">Write a Review</button>
 					</div>
 				</div>
 			</div>
 			{/*community Reviews*/}
 			<div className="book_reviews">
-				<p className="text-gray-700 font-normal text-3xl">Community Reviews</p>
+				<p className="flex text-center text-gray-700 font-normal text-2xl lg:text-3xl">Community Reviews</p>
 				<div className="flex flex-col space-y-3 justify-center w-full">
 					<div className="flex space-x-5 items-center w-full">
 						<div className="flex space-x-4 items-center">
 							<span className="flex items-center cursor-pointer">
-								<FaStar className="text-3xl text-red-500" />
-								<FaStar className="text-3xl text-red-500" />
-								<FaStar className="text-3xl text-red-500" />
-								<FaStar className="text-3xl text-red-500" />
+								<FaStar className="text-2xl lg:text-3xl text-red-500" />
+								<FaStar className="text-2xl lg:text-3xl text-red-500" />
+								<FaStar className="text-2xl lg:text-3xl text-red-500" />
+								<FaStar className="text-2xl lg:text-3xl text-red-500" />
 								<FaStarHalfStroke className="text-3xl text-red-500" />
 							</span>
 							<span className="flex items-center space-x-3">
