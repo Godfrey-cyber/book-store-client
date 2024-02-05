@@ -103,34 +103,34 @@ const BookPage = () => {
 					</span>
 				</div>
 
-				{/*<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-fit w-full">*/}
-				<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-full w-full">
-					<p className="text-xl md:text-2xl lg:text-4xl font-normal tex-gray-700">{book.title}</p>
-					<p className="text-lg font-light tex-gray-700 cursor-pointer hover:underline">By {book.author}</p>
-					<span className="flex items-center cursor-pointer">
-						<FaStar className="page_icon" />
-						<FaStar className="page_icon" />
-						<FaStar className="page_icon" />
-						<FaStar className="page_icon" />
-						<FaStarHalfStroke className="text-3xl text-red-500" />
-					</span>
-					<span className="flex items-center space-x-3">
-						<p className="text-sm font-light text-gray-700">(120 Reviews)</p>
-						<p className="text-sm font-light text-red-500">1,142 Ratings</p>
-					</span>
-					<p className="text-sm font-light text-gray-700" dangerouslySetInnerHTML={{__html:book.desc}} />
-					<span className="flex space-x-3 text-sm items-center">
-						<p className="text-gray-700 font-light">Price:</p>
-						<p className="text-red-500 font-light">Ksh. {book.price}</p>
-					</span>
-					{availability >= 0 ? <button onClick={() => navigate("/cart_page")} className="flex items-center bookpage_btn">Go to cart <FaArrowRightLong className="ml-2" /></button> : 
-					<button onClick={addBookToCart} className="bookpage_btn">Add to cart</button>
-					}
-				</div>
+				<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-fit w-full">
+					<div className="flex-col justify-center w-full">
+						<p className="text-xl md:text-2xl lg:text-4xl font-normal tex-gray-700">{book.title}</p>
+						<p className="text-lg font-light tex-gray-700 cursor-pointer hover:underline">By {book.author}</p>
+						<span className="flex items-center cursor-pointer">
+							<FaStar className="page_icon" />
+							<FaStar className="page_icon" />
+							<FaStar className="page_icon" />
+							<FaStar className="page_icon" />
+							<FaStarHalfStroke className="text-3xl text-red-500" />
+						</span>
+						<span className="flex items-center space-x-3">
+							<p className="text-sm font-light text-gray-700">(120 Reviews)</p>
+							<p className="text-sm font-light text-red-500">1,142 Ratings</p>
+						</span>
+						<p className="text-sm font-light text-gray-700" dangerouslySetInnerHTML={{__html:book.desc}} />
+						<span className="flex space-x-3 text-sm items-center">
+							<p className="text-gray-700 font-light">Price:</p>
+							<p className="text-red-500 font-light">Ksh. {book.price}</p>
+						</span>
+						{availability >= 0 ? <button onClick={() => navigate("/cart_page")} className="flex items-center bookpage_btn">Go to cart <FaArrowRightLong className="ml-2" /></button> : 
+						<button onClick={addBookToCart} className="bookpage_btn">Add to cart</button>
+						}
+					</div>
 				
 				
-				{/*qty buttons*/}
-					{/*<div className="flex items-center border border-gray-200 rounded-md w-max">
+					{/*qty buttons*/}
+					<div className="flex items-center border border-gray-200 rounded-md w-max">
 						<button disabled={arr <= 1} onClick={handleQtyDec} className="dec_btn">-</button>
 						<span className="items-center flex w-12">
 							<p className="text-sm text-gray-500 mx-auto">{ arr ? arr : 0 }</p>
@@ -164,7 +164,7 @@ const BookPage = () => {
 							<p className="book_desc">English</p>
 						</span>
 					</div>
-				</div>*/}
+				</div>
 			</main>
 
 
