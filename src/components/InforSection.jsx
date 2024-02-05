@@ -2,8 +2,8 @@ import React from 'react'
 
 const InforSection = () => {
 	return (
-		<div className="w-full h-fit bg-green-500 py-12">
-			<div className="grid grid-cols-2 gap-6 w-4/5 mx-auto">
+		<div className="w-full h-fit bg-green-500 py-12 px-4 md:px-8 lg:px-20">
+			<div className="grid grid-cols-2 gap-y-6 lg:gap-6 w-full mx-auto">
 				<div className="col-span-2 lg:col-span-1 bg-red-500 h-[300px] w-full">
 					<img className="h-full w-full" src="https://static.theceomagazine.net/wp-content/uploads/2023/04/21094311/books2.jpg" alt="" />
 				</div>
