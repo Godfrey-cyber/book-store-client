@@ -103,16 +103,7 @@ const BookPage = () => {
 					</span>
 				</div>
 
-				<div className="col-span-12 lg:col-span-9 flex-col space-y-4 w-full bg-pink-500 h-44">
-					
-				</div>
-				{/*<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4 h-full">
-					<div className="h-64 w-40 mx-auto">
-						<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
-						</div>
-					<button className="book_btn">Read</button>
-					<button disabled={count > 1} className="btn_buy">Buy this book</button>
-				</div>
+				{/*<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-fit w-full">*/}
 				<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-full w-full">
 					<p className="text-xl md:text-2xl lg:text-4xl font-normal tex-gray-700">{book.title}</p>
 					<p className="text-lg font-light tex-gray-700 cursor-pointer hover:underline">By {book.author}</p>
@@ -135,6 +126,9 @@ const BookPage = () => {
 					{availability >= 0 ? <button onClick={() => navigate("/cart_page")} className="flex items-center bookpage_btn">Go to cart <FaArrowRightLong className="ml-2" /></button> : 
 					<button onClick={addBookToCart} className="bookpage_btn">Add to cart</button>
 					}
+				</div>
+				
+				
 				{/*qty buttons*/}
 					{/*<div className="flex items-center border border-gray-200 rounded-md w-max">
 						<button disabled={arr <= 1} onClick={handleQtyDec} className="dec_btn">-</button>
