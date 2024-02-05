@@ -56,7 +56,7 @@ const CartPage = () => {
                     </div> : books?.map((book, id) => (
                 		
 						<div key={id} className="grid grid-cols-12 gap-x-8 border-t border-gray-200 py-4">
-							<div className="col-span-12 lg:col-span-10 flex-col lg:flex lg:justify-between lg:items-center">
+							{/*<div className="col-span-12 lg:col-span-10 flex-col lg:flex lg:justify-between lg:items-center">*/}
 								<div className="col-span-12 lg:col-span-6 h-44 w-28 flex-col">
 									<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 									<p className="text-sm font-light text-gray-700 truncate">{book.title}</p>
@@ -72,7 +72,7 @@ const CartPage = () => {
 									</div>
 									<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
 								</div>
-							</div>	
+							{/*</div>	*/}
 
 							<div className="col-span-2 flex-col flex justify-between">
 								<FaRegHeart className="text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer" />
