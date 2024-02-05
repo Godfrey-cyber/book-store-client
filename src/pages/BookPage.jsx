@@ -103,7 +103,7 @@ const BookPage = () => {
 					</span>
 				</div>
 
-				<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-fit w-full">
+				<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-fit w-full my-8">
 					<div className="flex-col justify-center w-full">
 						<p className="text-xl md:text-2xl lg:text-4xl font-normal tex-gray-700">{book.title}</p>
 						<p className="text-lg font-light tex-gray-700 cursor-pointer hover:underline">By {book.author}</p>
