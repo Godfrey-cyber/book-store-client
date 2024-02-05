@@ -95,7 +95,7 @@ const BookPage = () => {
 			<main className="grid grid-cols-12 gap-x-8 w-full px-8 mx-auto my-12 h-fit">
 				<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4 h-full">
 					{/*<img className="book_page" src={book.photo} alt="" />*/}
-					<div className="h-72 w-40 mx-auto">
+					<div className="h-64 w-40 mx-auto">
 						<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 						</div>
 					<button className="book_btn">Read</button>
