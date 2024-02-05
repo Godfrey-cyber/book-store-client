@@ -92,7 +92,13 @@ const BookPage = () => {
 
 
 
-			<main className="grid grid-cols-12 gap-x-8 w-4/5 rounded-md mx-auto h-[600px] bg-red-100">
+			<main className="grid grid-cols-12 gap-x-8 w-4/5 rounded-md mx-auto h-[600px] bg-red-100 my-6">
+				<div className="col-span-3 lg:col-span-12 flex-col space-y-4 w-full bg-pink-500 h-fit">
+
+				</div>
+				<div className="col-span-12 lg:col-span-9 flex-col space-y-4 w-full bg-pink-500 h-fit">
+					
+				</div>
 				{/*<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4 h-full">
 					<div className="h-64 w-40 mx-auto">
 						<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
