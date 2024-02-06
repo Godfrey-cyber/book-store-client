@@ -57,7 +57,7 @@ const CartPage = () => {
                     </div> : books?.map((book, id) => (
                 		
 						<div key={id} className="grid grid-cols-12 gap-x-8 border-t border-gray-200 py-4">
-							<div className="flex-col p-2 bg-red-400 col-span-12 lg:col-span-10 lg:flex lg:justify-between">
+							<div className="flex-col gap-x-6 lg:gap-y-4 p-2 bg-red-400 col-span-12 lg:col-span-10 lg:flex lg:justify-between">
 								<div className="h-44 w-32 flex-col">
 									<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 								</div>
