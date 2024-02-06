@@ -153,7 +153,7 @@ const BookPage = () => {
 						</span>
 						<span className="flex items-center justify-between">
 							<p className="book_desc">Published</p>
-							<p className="book_desc">{book.year} by {book.author}</p>
+							<p className="book_desc truncate">{book.year} by {book.author}</p>
 						</span>
 						<span className="flex items-center justify-between">
 							<p className="book_desc">ISBN</p>

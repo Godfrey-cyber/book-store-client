@@ -57,13 +57,12 @@ const CartPage = () => {
                     </div> : books?.map((book, id) => (
                 		
 						<div key={id} className="grid grid-cols-12 gap-x-8 border-t border-gray-200 py-4">
-							<div className="col-span-12 lg:col-span-10 flex-col lg:flex lg:justify-between lg:items-center">
-								<div className="lg:col-span-6 h-44 w-28 flex-col">
+							<div className="bg-red-400 col-span-12 lg:col-span-10 flex-col lg:flex lg:justify-between lg:items-center">
+								<div className="h-44 w-28 flex-col">
 									<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
-
 								</div>
 
-								<div className="flex lg:flex-col justify-between">
+								<div className="flex lg:flex-col lg:justify-between">
 									<p className="text-sm font-light text-gray-700 truncate">{book.title}</p>
 									<div className="flex items-center border border-gray-200 rounded-md w-max">
 										<button disabled={book.count <= 1} onClick={() => count >= 2 && setCount(count - 1)} onClick={() => dispatch(decrement({id: book._id, count }))} className="cartpage_btn_2">-</button>
@@ -83,7 +82,6 @@ const CartPage = () => {
 	                        </span>
 							</div>
 						</div>
-						
 					))}
 				</div>
 				<div className="col-span-4 h-fit bg-gray-100 flex-col space-y-4 my-12 p-4">
