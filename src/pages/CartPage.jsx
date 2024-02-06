@@ -53,12 +53,12 @@ const CartPage = () => {
                         </span>
                         
                         <p className="text-sm font-normal text-gray-800 text-center">Already have an account? <span onClick={() => navigate("/register")} className="cartpage_p">Login</span> to see items in your cart</p>
-                        <button onClick={() => navigate("/")} className="cartpage_btn">Start Shopping</button>
+                        <button onClick={() => navigate("/")} className="cartpage_btn">Start Shopping now</button>
                     </div> : books?.map((book, id) => (
                 		
-						<div key={id} className="grid grid-cols-12 gap-x-8 border-t border-gray-200 py-4">
+						<div key={id} className="grid grid-cols-12 gap-x-8 border-b border-gray-200 py-4">
 
-							<div className="flex gap-x-6 lg:gap-y-4 p-2 bg-red-400 col-span-12 lg:col-span-10 lg:justify-between">
+							<div className="flex gap-x-3 lg:gap-y-2 p-2 bg-red-400 lg:flex col-span-12 lg:col-span-10 lg:justify-between">
 								<div className="h-44 w-32 flex-col">
 									<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 								</div>
