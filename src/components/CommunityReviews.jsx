@@ -49,7 +49,7 @@ const CommunityReviews = () => {
 				</div>
 			</div>
 		</div>
-)
+	)
 }
 
 export default CommunityReviews
