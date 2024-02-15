@@ -3,7 +3,7 @@ import React from 'react'
 const CommunityReviews = () => {
 	return (
 		<div className="book_reviews">
-			<p className="flex text-center text-gray-700 font-normal text-2xl lg:text-3xl">Community Reviews</p>
+			<p className="flex text-center justify-center text-gray-700 font-normal text-2xl lg:text-3xl">Community Reviews</p>
 			<div className="flex flex-col space-y-3 justify-center w-full">
 				<div className="flex space-x-5 items-center w-full">
 					<div className="flex space-x-4 items-center">
