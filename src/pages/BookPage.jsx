@@ -43,7 +43,7 @@ const BookPage = () => {
 		dispatch(getCartCount())
 		toast.success("Success🎊 book added to cart")
 	}
-	// check if current book exists in the cart books if it does do not display the add to cart button
+	// check if current book exists in the cart books if it does, do not display the add to cart button
 	const checkBookAvailability = () => {
 		return books.findIndex(bookItem => bookItem._id === book._id)
 	}
