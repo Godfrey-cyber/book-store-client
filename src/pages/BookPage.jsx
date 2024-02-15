@@ -167,13 +167,9 @@ const BookPage = () => {
 				</div>
 			</main>
 
-
-
-
-
 			<BestSelling />
 			<div className="bookpage_div">
-				<p className="text-gray-700 font-normal text-2xl lg:text-3xl">Ratings & Reviews</p>
+				<p className="flex items-center text-gray-700 font-normal text-2xl lg:text-3xl">Ratings & Reviews</p>
 				<div className="flex flex-col space-y-3 items-center justify-center">
 					<img className="rounded-full h-12 w-12 bg-cover" src={book.photo} alt={book.photo} />
 					<p className="text-gray-700 font-normal text-2xl lg:text-3xl">What do you think?</p>

@@ -162,7 +162,7 @@
     @apply flex border-t border-b border-gray-400 flex-col space-y-3 mx-auto my-12 w-full
   }
   .book_reviews {
-    @apply flex border-b border-gray-400 flex-col space-y-3 mx-auto my-6
+    @apply flex border-b py-3 border-gray-400 flex-col space-y-3 mx-auto my-6
   }
   /*cartpage*/
   .cartpage_div {
