@@ -159,7 +159,7 @@
     @apply text-sm text-red-400 font-semibold bg-white border border-red-300 hover:bg-red-400 hover:text-white transition-all delay-300 rounded-3xl px-3 py-2
   }
   .bookpage_div {
-    @apply flex border-t border-b border-gray-400 flex-col space-y-3 mx-auto my-12 w-full px-4 md:px-12 lg:px-20 xl:px-24
+    @apply flex border-t border-b border-gray-400 flex-col space-y-3 mx-auto my-12 py-4 w-full px-4 md:px-12 lg:px-20 xl:px-24
   }
   .book_reviews {
     @apply flex border-b py-3 border-gray-400 flex-col space-y-3 mx-auto my-6 w-full px-4 md:px-12 lg:px-20 xl:px-24
