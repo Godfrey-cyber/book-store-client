@@ -22,9 +22,11 @@ const SmalHeader = () => {
 					</div>
 				</div>
 				{/*SELL A BOOK*/}
-				<p onClick={() => navigate("/upload_book")} className="sell_book">Sell a book</p>
+				<div className="flex">
+					<p onClick={() => navigate("/upload_book")} className="sell_book">Sell a book</p>
+				</div>
 				{/*//cta*/}
-				<div className="flex space-x-3 px-20 items-center w-full">
+				<div className="flex space-x-3 items-center w-full">
 					<span className="cta_media">
 						<FaPhoneAlt className="hover:text-red-600 media_icon" />
 						<p className="flex text-xs lg:text-sm font-light text-gray-600">reallygreat@gmail.com</p>	 
