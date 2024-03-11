@@ -6,7 +6,7 @@ import { IoMdMail, IoMdTime } from "react-icons/io"
 const SmalHeader = () => {
 	const navigate = useNavigate()
 	return (
-		<section className="flex justify-between items-center w-full bg-gray-200 lg:px-20 h-[40px] bg-red-400">
+		<section className="flex justify-between items-center w-full bg-red-200 lg:px-20 h-[40px]">
 			{/*<div className=" w-full">*/}
 				{/*//media & time*/}
 				<div className="flex items-center space-x-3 w-full">
