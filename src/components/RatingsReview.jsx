@@ -2,7 +2,7 @@ import React from 'react'
 
 const RatingsReview = ({ photo }) => {
 	return (
-		{/*<div className="">*/}
+		// {/*<div className="">*/}
 			<div className="bookpage_div">
 				<p className="flex items-center text-center justify-center text-gray-700 font-normal w-full text-2xl lg:text-3xl">Ratings & Reviews</p>
 				<div className="flex flex-col space-y-3 items-center justify-center">

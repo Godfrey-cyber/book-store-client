@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addBook, items, getTotal, getCartCount, cartItems, decrement, increment } from '../Redux/Slices/cartSlice'
 import SmallHeader from "../components/SmallHeader"
 import LargeHeader from "../components/LargeHeader"
-import RatingsReviews from "..components/RatingsReviews"
+import RatingsReview from "../components/RatingsReview"
 import CommunityReviews from "../components/CommunityReviews"
 import Footer from "../components/Footer"
 
@@ -171,7 +171,7 @@ const BookPage = () => {
 			</main>
 
 			<BestSelling />
-			<RatingsReviews photo={book.photo}/>
+			<RatingsReview photo={book.photo}/>
 			{/*community Reviews*/}
 			<CommunityReviews />
 			<Footer />
