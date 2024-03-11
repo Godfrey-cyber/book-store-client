@@ -105,7 +105,7 @@ const LargeHeader = () => {
 		        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 		        	<FaSearch className="search_icon" />
 		        </div>
-		        {searchTerm && <div className="largeheader_div">
+		        {searchTerm && <div className="largeheader_div overflow-y-hidden">
 		        	<span className="largeheader_span">
 		        		<span className="flex text-sm font-normal text-gray-800">Search results for <p className="text-sm font-semibold text-gray-800 ml-2">"{searchTerm}"</p></span>
 		        	</span>
