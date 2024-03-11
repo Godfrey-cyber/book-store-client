@@ -6,10 +6,10 @@ import { IoMdMail, IoMdTime } from "react-icons/io"
 const SmalHeader = () => {
 	const navigate = useNavigate()
 	return (
-		<section className="flex justify-between items-center w-full bg-gray-200 lg:px-20 h-[40px]">
+		<section className="flex justify-between items-center w-full bg-gray-200 lg:px-20 h-[40px] bg-red-400">
 			{/*<div className=" w-full">*/}
 				{/*//media & time*/}
-				<div className="flex items-center space-x-3 w-full bg-red-400">
+				<div className="flex items-center space-x-3 w-full">
 					<span className="flex space-x-2 text-gray-500 text-sm items-center">
 						<IoMdTime className="media_icon hover:text-red-600" />
 						<p className="flex text-xs lg:text-sm font-light text-gray-600">Openning Hours 10.00 am - 6.00 pm</p>	
