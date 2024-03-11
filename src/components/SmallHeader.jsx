@@ -9,7 +9,7 @@ const SmalHeader = () => {
 		<section className="flex justify-between items-center w-full bg-gray-200 lg:px-20 h-[40px]">
 			{/*<div className=" w-full">*/}
 				{/*//media & time*/}
-				<div className="flex items-center space-x-3 w-full">
+				<div className="flex items-center space-x-3 w-full bg-red-400">
 					<span className="flex space-x-2 text-gray-500 text-sm items-center">
 						<IoMdTime className="media_icon hover:text-red-600" />
 						<p className="flex text-xs lg:text-sm font-light text-gray-600">Openning Hours 10.00 am - 6.00 pm</p>	
