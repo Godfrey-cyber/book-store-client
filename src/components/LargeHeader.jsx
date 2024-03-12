@@ -100,7 +100,8 @@ const LargeHeader = () => {
 		        	<button onClick={() => logoutUser(dispatch)} type="button" className="signin_btn hidden lg:flex">Log Out</button>}
 		        </div>
 		    </span>
-		    <div className="flex-col relative sm:hidden flex w-3/5 mx-auto">
+		{/*search bar*/}
+		    <div className="flex-col relative hidden flex w-3/5 mx-auto">
 		        <div className="search_div">
 		        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 		        	<FaSearch className="search_icon" />

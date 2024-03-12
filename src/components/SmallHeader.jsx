@@ -6,15 +6,15 @@ import { IoMdMail, IoMdTime } from "react-icons/io"
 const SmalHeader = () => {
 	const navigate = useNavigate()
 	return (
-		<section className="flex justify-between items-center w-full bg-gray-200 md:px-10 lg:px-20 h-[40px]">
+		<section className="flex justify-between items-center w-full bg-gray-200 px-6 md:px-10 lg:px-20 h-[40px]">
 			{/*<div className=" w-full">*/}
 				{/*//media & time*/}
 				<div className="flex items-center space-x-3">
 					<span className="flex space-x-2 text-gray-500 text-sm items-center">
-						<IoMdTime className="media_icon hover:text-red-600" />
-						<p className="flex text-xs lg:text-sm font-light text-gray-600">Openning Hours 10.00 am - 6.00 pm</p>	
+						<IoMdTime className="hidden sm:flex media_icon hover:text-red-600" />
+						<p className="hidden sm:flex text-xs lg:text-sm font-light text-gray-600">Openning Hours 10.00 am - 6.00 pm</p>	
 					</span>
-					<span className="flex space-x-3 text-gray-600">|</span>
+					<span className="hidden sm:flex space-x-3 text-gray-600">|</span>
 					<div className="flex space-x-3 items-center" >
 						<FaFacebook className="hover:text-blue-600 media_icon" />
 						<FaInstagram className="hover:text-yellow-600 media_icon" />
@@ -22,7 +22,7 @@ const SmalHeader = () => {
 					</div>
 				</div>
 				{/*SELL A BOOK*/}
-				<div className="">
+				<div className="hidden sm:flex sm:text-red-500">
 					<p onClick={() => navigate("/upload_book")} className="sell_book">Sell a book</p>
 				</div>
 				{/*//cta*/}
@@ -31,7 +31,7 @@ const SmalHeader = () => {
 						<FaPhoneAlt className="hover:text-red-600 media_icon" />
 						<p className="flex text-xs lg:text-sm font-light text-gray-600">reallygreat@gmail.com</p>	 
 					</span>
-					<span className="cta_media">
+					<span className="hidden sm:flex cta_media">
 						<IoMdMail className="hover:text-red-600 media_icon" />
 						<p className="text-xs lg:text-sm font-light text-gray-600">+254 7123 8456</p>
 					</span>
