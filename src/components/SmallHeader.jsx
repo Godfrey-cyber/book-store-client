@@ -29,7 +29,7 @@ const SmalHeader = () => {
 				<div className="flex space-x-3 items-center">
 					<span className="cta_media">
 						<FaPhoneAlt className="hover:text-red-600 media_icon" />
-						<p className="flex text-xs lg:text-sm font-light text-gray-600">reallygreat@gmail.com</p>	 
+						<p className="flex text-xs sm:text-sm font-light text-gray-600">reallygreat@gmail.com</p>	 
 					</span>
 					<span className="hidden sm:flex cta_media">
 						<IoMdMail className="hover:text-red-600 media_icon" />
