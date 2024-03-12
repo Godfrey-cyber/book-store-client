@@ -60,9 +60,9 @@ const LargeHeader = () => {
 	
 	return (
 		<nav className={`navbar gap-y-4 ${scrolled ? 'scrolled' : ''} large_header`}>
-			<span className="flex justify-between items-center w-full my-auto h-full">
+			<div className="flex justify-between items-center w-full my-auto h-full">
 	        	<div className="flex space-x-3 items-center">
-		        	<span onClick={() => navigate("/")} className="flex h-8 cursor-pointer w-auto">
+		        	<span onClick={() => navigate("/")} className="flex h-10 lg:h-8 cursor-pointer w-auto">
 		        		<img className="w-full h-full" src="https://preview.colorlib.com/theme/abcbook/assets/img/logo/logo.png" />
 		        	</span>
 	        	</div>
@@ -99,9 +99,9 @@ const LargeHeader = () => {
 		        	{!user ? <button onClick={() => navigate("/sign_up")} type="button" className="signin_btn hidden lg:flex">Log In</button> : 
 		        	<button onClick={() => logoutUser(dispatch)} type="button" className="signin_btn hidden lg:flex">Log Out</button>}
 		        </div>
-		    </span>
+		    </div>
 		{/*search bar*/}
-		    <div className="flex-col relative hidden flex w-3/5 mx-auto">
+		    <div className="flex-col relative flex w-4/5 md:w-3/5 mx-auto">
 		        <div className="search_div">
 		        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 		        	<FaSearch className="search_icon" />

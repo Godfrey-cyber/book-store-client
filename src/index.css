@@ -5,10 +5,10 @@
 @layer components {
   /*==========large header=============*/
   .large_header {
-    @apply transition delay-300 flex h-[75px] lg:h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-8 lg:px-20
+    @apply transition delay-300 flex h-[85px] lg:h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-4 lg:px-20
   }
   .search_div {
-    @apply flex justify-between items-center rounded-3xl border border-gray-500 w-96 h-fit p-1
+    @apply flex justify-between items-center rounded-3xl border border-gray-500 min-w-36 max-w-full lg:max-w-96 h-fit p-1
   }
   .search_input {
     @apply w-full h-full outline-none border-none rounded-3xl bg-transparent px-3 text-sm font-light text-gray-600
@@ -20,10 +20,10 @@
     @apply text-sm font-medium border border-red-400 hover:divide-red-500 hover:bg-white text-white rounded-3xl bg-red-400 rounded-3xl hover:text-red-500 px-3 lg:px-5 py-1 lg:py-2 transition-all delay-300 ease-in-out duration-300 cursor-pointer
   }
   .cta_icon {
-    @apply hover:text-red-600 text-red-500 transition delay-300 text-2xl font-light cursor-pointer mr-3
+    @apply hover:text-red-600 text-red-500 transition delay-300 text-3xl lg:text-2xl font-semibold lg:font-light cursor-pointer mr-3
   }
   .cta_span {
-    @apply flex items-center absolute bottom-8 right-8 md:bottom-7 md:right-44 bg-red-400 h-6 w-6 justify-center rounded-full text-center text-white text-xs border-2 border-white
+    @apply flex items-center absolute bottom-10 right-6 md:bottom-7 md:right-44 bg-red-400 h-6 w-6 justify-center rounded-full text-center text-white text-xs border-2 border-white
   }
   .cta_p {
     @apply text-sm font-thin text-black cursor-pointer
