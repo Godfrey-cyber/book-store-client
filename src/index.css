@@ -14,7 +14,7 @@
     @apply w-full h-full outline-none border-none rounded-3xl bg-transparent px-3 text-sm font-light text-gray-600
   }
   .largeheader_div {
-    @apply flex-col space-y-2 rounded-md bg-white shadow shadow-gray-200 h-fit min-w-[400px] absolute top-14 p-1
+    @apply flex-col space-y-2 rounded-md bg-white shadow shadow-gray-200 h-fit min-w-full md:min-w-[400px] absolute top-14 p-1
   }
   .largeheader_span {
     @apply flex items-center w-full h-8 border-b border-gray-400
