@@ -60,7 +60,7 @@ const LargeHeader = () => {
 	
 	return (
 		<nav className={`navbar gap-y-4 ${scrolled ? 'scrolled' : ''} large_header`}>
-			<div className="flex justify-between items-center w-full my-auto h-full lg:my-auto bg-red-400">
+			<div className="flex justify-between items-center w-full my-auto h-full lg:my-auto">
 	        	<div className="flex space-x-3 items-center">
 		        	<span onClick={() => navigate("/")} className="flex h-10 lg:h-8 cursor-pointer w-auto">
 		        		<img className="w-full h-full" src="https://preview.colorlib.com/theme/abcbook/assets/img/logo/logo.png" />
@@ -101,7 +101,7 @@ const LargeHeader = () => {
 		        </div>
 		    </div>
 		{/*search bar*/}
-		    <div className="flex-col relative flex w-full md:w-3/5 mx-auto bg-red-400 mb-3">
+		    <div className="flex-col relative flex w-full md:w-3/5 mx-auto mb-3">
 		        <div className="search_div">
 		        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 		        	<FaSearch className="search_icon" />
