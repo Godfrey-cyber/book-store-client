@@ -5,13 +5,19 @@
 @layer components {
   /*==========large header=============*/
   .large_header {
-    @apply transition delay-300 flex h-[85px] lg:h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-4 lg:px-20
+    @apply transition delay-300 flex h-[110px] lg:h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-4 lg:px-20
   }
   .search_div {
-    @apply flex justify-between items-center rounded-3xl border border-gray-500 min-w-36 max-w-full lg:max-w-96 h-fit p-1
+    @apply flex justify-between items-center rounded-3xl border border-gray-500 min-w-36 max-w-full lg:max-w-96 h-8 p-1
   }
   .search_input {
     @apply w-full h-full outline-none border-none rounded-3xl bg-transparent px-3 text-sm font-light text-gray-600
+  }
+  .largeheader_div {
+    @apply flex-col space-y-2 rounded-md bg-white shadow shadow-gray-200 h-fit min-w-[400px] absolute top-14 p-1
+  }
+  .largeheader_span {
+    @apply flex items-center w-full h-8 border-b border-gray-400
   }
   .search_icon {
     @apply hover:text-red-600 text-red-500 transition delay-300 text-2xl font-light cursor-pointer mr-3
@@ -23,7 +29,7 @@
     @apply hover:text-red-600 text-red-500 transition delay-300 text-3xl lg:text-2xl font-semibold lg:font-light cursor-pointer mr-3
   }
   .cta_span {
-    @apply flex items-center absolute bottom-10 right-6 md:bottom-7 md:right-44 bg-red-400 h-6 w-6 justify-center rounded-full text-center text-white text-xs border-2 border-white
+    @apply flex items-center absolute bottom-20 right-4 md:bottom-7 md:right-44 bg-red-400 h-6 w-6 justify-center rounded-full text-center text-white text-xs border-2 border-white
   }
   .cta_p {
     @apply text-sm font-thin text-black cursor-pointer
@@ -185,12 +191,6 @@
   }
   .cartpage_x {
     @apply flex justify-center items-center cursor-pointer rounded-full  bg-red-400 h-9 w-9 text-center
-  }
-  .largeheader_div {
-    @apply flex-col space-y-2 rounded-md bg-white shadow shadow-gray-200 h-fit min-w-[400px] absolute top-14 p-4
-  }
-  .largeheader_span {
-    @apply flex items-center w-full h-8 border-b border-gray-400
   }
 }
 
