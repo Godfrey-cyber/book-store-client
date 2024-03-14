@@ -57,14 +57,19 @@ const CartPage = () => {
                     </div> : books?.map((book, id) => (
                 		
 						<div key={book._id} className="grid grid-cols-12 gap-x-8 border-b border-gray-200 py-4">
-
-							<div className="flex gap-x-3 lg:gap-y-2 p-2 bg-red-400 lg:flex col-span-12 lg:col-span-10 lg:justify-between">
-								<div className="h-44 w-32 flex-col">
-									<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
+							<div className="flex gap-x-3 lg:gap-y-2 p-2 bg-red-400 lg:flex col-span-12 lg:col-span-10 lg:justify-between w-full">
+								{/*img, title & price*/}
+								<div className="flex space-x-3 items-center">
+									<div className="h-44 w-32 flex-col">
+										<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
+									</div>
+									<div className="flex flex-col justify-between">
+										<p className="text-sm font-light text-gray-700 truncate">{book.title}</p>
+										<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
+									</div>
 								</div>
-
+								{/*buttons, remove & like*/}
 								<div className="flex lg:flex-col lg:justify-between lg:gap-y-4 gap-x-4">
-									<p className="text-sm font-light text-gray-700 truncate">{book.title}</p>
 									<div className="flex items-center border border-gray-200 rounded-md w-max">
 										<button disabled={book.count <= 1} onClick={() => count >= 2 && setCount(count - 1)} onClick={() => dispatch(decrement({id: book._id, count }))} className="cartpage_btn_2">-</button>
 										<span className="items-center flex w-12">
@@ -72,20 +77,19 @@ const CartPage = () => {
 										</span>
 										<button onClick={() => setCount(count + 1)} onClick={() => dispatch(increment({id: book._id, count }))} className="cartpage_btn_3">+</button>
 									</div>
-									<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
+									<div className="col-span-2 flex-col flex justify-between">
+										<FaRegHeart className="text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer" />
+										<span onClick={() => dispatch(removeFromCart({ id: book._id }))} className="cartpage_x">
+			                            	<RxCross2 className="h-4 lg:h-6 w-4 lg:w-6 text-white" />
+			                        	</span>
+									</div>
 								</div>
-							</div>	
 
-							<div className="col-span-2 flex-col flex justify-between">
-								<FaRegHeart className="text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer" />
-								<span onClick={() => dispatch(removeFromCart({ id: book._id }))} className="cartpage_x">
-	                            <RxCross2 className="h-4 lg:h-6 w-4 lg:w-6 text-white" />
-	                        </span>
-							</div>
+							</div>	
 						</div>
 					))}
 				</div>
-				<div className="col-span-4 h-fit bg-gray-100 flex-col space-y-4 my-12 p-4">
+				<div className="col-span-12 lg:col-span-4 h-fit bg-gray-100 flex-col space-y-4 my-12 p-4">
 					<div className="flex-col space-y-4 bg-white w-full p-2 rounded-md">
 						<span className="flex justify-between items-center">
 							<p className="text-lg font-normal text-gray-700 slashed-zero">Subtotal:</p>
