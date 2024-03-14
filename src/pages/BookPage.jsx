@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { FaStar, FaStarHalfStroke, FaArrowRightLong } from "react-icons/fa6"
 import BestSelling from "../components/BestSelling.jsx"
@@ -22,6 +22,7 @@ const BookPage = () => {
 	const etp = useSelector(cartItems)
 	const books = useSelector(items)
 	console.log(etp)
+	console.log(book)
 	// handle book increase
 	const handleQtyInc = () => {
 		setCount(count + 1)

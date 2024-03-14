@@ -56,7 +56,7 @@ const CartPage = () => {
                         <button onClick={() => navigate("/")} className="cartpage_btn">Start Shopping now</button>
                     </div> : books?.map((book, id) => (
                 		
-						<div key={id} className="grid grid-cols-12 gap-x-8 border-b border-gray-200 py-4">
+						<div key={book._id} className="grid grid-cols-12 gap-x-8 border-b border-gray-200 py-4">
 
 							<div className="flex gap-x-3 lg:gap-y-2 p-2 bg-red-400 lg:flex col-span-12 lg:col-span-10 lg:justify-between">
 								<div className="h-44 w-32 flex-col">
