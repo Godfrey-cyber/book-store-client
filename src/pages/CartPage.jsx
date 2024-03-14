@@ -43,7 +43,7 @@ const CartPage = () => {
 		<section className="w-full h-[100vh]">
 			<SmallHeader />
 			<LargeHeader />
-			<main className="grid grid-cols-12 gap-8 w-4/5 mx-auto">
+			<main className="grid grid-cols-12 gap-8 w-full px-3 md:px-1 md:w-4/5 mx-auto">
 				<div className="col-span-12 lg:col-span-8 h-fit my-6 lg:my-12 space-y-3 lg:space-y-6">
 					<p className="cartpage_div">You have ({(books.length)}) books in your cart</p>
 					{books.length === 0 ?
@@ -56,8 +56,8 @@ const CartPage = () => {
                         <button onClick={() => navigate("/")} className="cartpage_btn">Start Shopping now</button>
                     </div> : books?.map((book, id) => (
                 		
-						<div key={book._id} className="grid grid-cols-12 gap-x-8 border-b border-gray-200 py-4">
-							<div className="flex gap-x-3 lg:gap-y-2 p-2 bg-red-400 lg:flex col-span-12 lg:col-span-10 lg:justify-between w-full">
+						<div key={book._id} className="flex space-y-3 gap-x-8 border-b border-gray-200 py-4">
+							{/*<div className="flex gap-x-3 lg:gap-y-2 p-2 bg-red-400 lg:flex col-span-12 lg:col-span-10 lg:justify-between w-full">*/}
 								{/*img, title & price*/}
 								<div className="flex space-x-3 items-center">
 									<div className="h-44 w-32 flex-col">
@@ -77,7 +77,7 @@ const CartPage = () => {
 										</span>
 										<button onClick={() => setCount(count + 1)} onClick={() => dispatch(increment({id: book._id, count }))} className="cartpage_btn_3">+</button>
 									</div>
-									<div className="col-span-2 flex-col flex justify-between">
+									<div className="flex-col flex justify-between">
 										<FaRegHeart className="text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer" />
 										<span onClick={() => dispatch(removeFromCart({ id: book._id }))} className="cartpage_x">
 			                            	<RxCross2 className="h-4 lg:h-6 w-4 lg:w-6 text-white" />
@@ -85,7 +85,7 @@ const CartPage = () => {
 									</div>
 								</div>
 
-							</div>	
+							{/*</div>	*/}
 						</div>
 					))}
 				</div>
