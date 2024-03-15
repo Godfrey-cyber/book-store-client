@@ -56,10 +56,10 @@ const CartPage = () => {
                         <button onClick={() => navigate("/")} className="cartpage_btn">Start Shopping now</button>
                     </div> : books?.map((book, id) => (
                 		
-						<div key={book._id} className="flex-col space-y-3 gap-x-8 border-b border-gray-200 py-4">
+						<div key={book._id} className="flex-col bg-red-500 space-y-3 gap-x-8 border-b border-gray-200 py-4">
 							{/*<div className="flex gap-x-3 lg:gap-y-2 p-2 bg-red-400 lg:flex col-span-12 lg:col-span-10 lg:justify-between w-full">*/}
 								{/*img, title & price*/}
-								<div className="flex space-x-3 w-full">
+								<div className="flex space-x-3">
 									<div className="h-44 w-32 flex-col">
 										<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 									</div>
