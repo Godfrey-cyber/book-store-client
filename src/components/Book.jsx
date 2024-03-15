@@ -2,7 +2,7 @@ import React from 'react'
 import { useNavigate } from "react-router-dom"
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6"
 
-const Book = ({book}) => {
+const Book = ({ book }) => {
 	const navigate = useNavigate()
 	return (
 		<div onClick={() => navigate(`/book_details/${book._id}`)} key={book._id} className="best_div group">

@@ -187,10 +187,10 @@
     @apply w-4/5 text-sm text-white font-normal px-4 py-2 lg:w-2/5 rounded-sm hover:bg-red-500 bg-red-400 transition delay-300
   }
   .cartpage_btn_2 {
-    @apply items-center flex text-lg text-gray-500 px-3 hover:text-white transition delay-300 transition delay-300 cursor-pointer rounded-tl-md rounded-bl-md hover:bg-red-200 bg-gray-200
+    @apply items-center flex text-lg py-2 text-gray-500 px-3 hover:text-white transition delay-300 transition delay-300 cursor-pointer rounded-tl-md rounded-bl-md hover:bg-red-200 bg-gray-200
   }
   .cartpage_btn_3 {
-    @apply items-center flex text-lg text-gray-500 px-3 hover:text-white transition delay-300 transition delay-300 cursor-pointer rounded-tr-md rounded-br-md hover:bg-green-200 bg-gray-200
+    @apply items-center flex text-lg py-2 text-gray-500 px-3 hover:text-white transition delay-300 transition delay-300 cursor-pointer rounded-tr-md rounded-br-md hover:bg-green-200 bg-gray-200
   }
   .cartpage_x {
     @apply flex justify-center items-center cursor-pointer rounded-full  bg-red-400 h-9 w-9 text-center

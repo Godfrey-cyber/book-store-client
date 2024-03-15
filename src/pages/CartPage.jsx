@@ -68,8 +68,8 @@ const CartPage = () => {
 										<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
 									</div>
 								</div>
-								{/*buttons, remove & like*/}
-								<div className="flex justify-between lg:gap-y-4 gap-x-4">
+								{/*+/- buttons, remove & like*/}
+								<div className="flex justify-between items-center">
 									<div className="flex items-center border border-gray-200 rounded-md w-max">
 										<button disabled={book.count <= 1} onClick={() => count >= 2 && setCount(count - 1)} onClick={() => dispatch(decrement({id: book._id, count }))} className="cartpage_btn_2">-</button>
 										<span className="items-center flex w-12">
@@ -77,7 +77,7 @@ const CartPage = () => {
 										</span>
 										<button onClick={() => setCount(count + 1)} onClick={() => dispatch(increment({id: book._id, count }))} className="cartpage_btn_3">+</button>
 									</div>
-									<div className="flex space-x-3">
+									<div className="flex space-x-3 items-center">
 										<FaRegHeart className="text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer" />
 										<span onClick={() => dispatch(removeFromCart({ id: book._id }))} className="cartpage_x">
 			                            	<RxCross2 className="h-4 lg:h-6 w-4 lg:w-6 text-white" />
