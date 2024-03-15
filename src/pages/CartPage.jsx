@@ -63,8 +63,8 @@ const CartPage = () => {
 									<div className="h-44 w-32 flex-col">
 										<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 									</div>
-									<div className="flex flex-1 flex-col justify-between h-full bg-blue-400">
-										<p className="text-sm font-light text-gray-700 truncate">{book.title}</p>
+									<div className="flex flex-col justify-between h-full bg-blue-400">
+										<p className="text-sm line-clamp-3 font-light text-gray-700 truncate">{book.title}</p>
 										<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
 									</div>
 								</div>
