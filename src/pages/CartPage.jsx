@@ -59,11 +59,11 @@ const CartPage = () => {
 						<div key={book._id} className="flex-col bg-red-500 space-y-3 gap-x-8 border-b border-gray-200 p-4">
 							{/*<div className="flex gap-x-3 lg:gap-y-2 p-2 bg-red-400 lg:flex col-span-12 lg:col-span-10 lg:justify-between w-full">*/}
 								{/*img, title & price*/}
-								<div className="flex space-x-3 w-full">
-									<div className="h-44 w-32 flex-col">
+								<div className="grid grid-cols-12 gap-x-3">
+									<div className="col-span-4 h-44 w-32">
 										<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 									</div>
-									<div className="flex flex-col content-between w-3/4 h-full bg-blue-400">
+									<div className="col-span-8 flex-col content-between h-full bg-blue-400">
 										<p className="text-sm line-clamp-3 font-light w-full text-gray-700 truncate">{book.title}</p>
 										<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
 									</div>
