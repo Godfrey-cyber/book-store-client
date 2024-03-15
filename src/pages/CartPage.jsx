@@ -63,13 +63,13 @@ const CartPage = () => {
 									<div className="h-44 w-32 flex-col">
 										<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 									</div>
-									<div className="flex-col justify-between">
+									<div className="flex flex-col justify-between h-full">
 										<p className="text-sm font-light text-gray-700 truncate">{book.title}</p>
 										<p className="text-lg font-light text-red-400 slashed-zero">KSH: {book.price * book.count}</p>
 									</div>
 								</div>
 								{/*buttons, remove & like*/}
-								<div className="flex lg:flex-col lg:justify-between lg:gap-y-4 gap-x-4">
+								<div className="flex justify-between lg:gap-y-4 gap-x-4">
 									<div className="flex items-center border border-gray-200 rounded-md w-max">
 										<button disabled={book.count <= 1} onClick={() => count >= 2 && setCount(count - 1)} onClick={() => dispatch(decrement({id: book._id, count }))} className="cartpage_btn_2">-</button>
 										<span className="items-center flex w-12">
