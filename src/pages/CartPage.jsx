@@ -77,7 +77,7 @@ const CartPage = () => {
 										</span>
 										<button onClick={() => setCount(count + 1)} onClick={() => dispatch(increment({id: book._id, count }))} className="cartpage_btn_3">+</button>
 									</div>
-									<div className="flex-col flex justify-between">
+									<div className="flex space-x-3">
 										<FaRegHeart className="text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer" />
 										<span onClick={() => dispatch(removeFromCart({ id: book._id }))} className="cartpage_x">
 			                            	<RxCross2 className="h-4 lg:h-6 w-4 lg:w-6 text-white" />
