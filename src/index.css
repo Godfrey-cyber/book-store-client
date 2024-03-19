@@ -32,7 +32,7 @@
     @apply hover:text-red-600 text-red-500 transition delay-300 text-3xl lg:text-2xl font-semibold lg:font-light cursor-pointer mr-3
   }
   .cta_span {
-    @apply flex items-center absolute bottom-20 right-4 md:bottom-7 md:right-44 bg-red-400 h-6 w-6 justify-center rounded-full text-center text-white text-xs border-2 border-white
+    @apply flex items-center absolute bottom-20 right-6 md:bottom-7 md:right-44 bg-red-400 h-6 w-6 justify-center rounded-full text-center text-white text-xs border-2 border-white
   }
   .cta_p {
     @apply text-sm font-thin text-black cursor-pointer

@@ -14,6 +14,7 @@ import CartPage from "./pages/CartPage.jsx"
 import Login from "./pages/Login.jsx"
 import SignUp from "./pages/SignUp.jsx"
 import SellBook from "./pages/SellBook.jsx"
+// import EditBookPage.jsx from "./pages/EditBookPage.jsx"
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -33,6 +34,7 @@ function App() {
 	    	<Route path="/log_in" element={<Login />} />
         <Route path="/sign_up" element={<SignUp />} />
 	    	<Route path="/upload_book" element={<SellBook />} />
+        {/*<Route path="/update_book/:id" element={<EditBookPage />}*/}
         </Routes>
     </BrowserRouter>
     </section>
