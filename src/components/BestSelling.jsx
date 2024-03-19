@@ -39,7 +39,7 @@ const BestSelling = () => {
 	useEffect(() => { 
 		const getBooks = async() => {
 			try {
-				const response = await axios.get('https://my-book-store-1oki.onrender.com/api/v1/books/getAllBooks', headers: {'Content-Type': "application/json"})
+				const response = await axios.get('https://my-book-store-1oki.onrender.com/api/v1/books/getAllBooks')
 				if (response.status === 200 || res.statusText === 'OK') {
 					setBooks(response.data.data)
 					console.log({books})
