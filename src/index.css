@@ -51,6 +51,9 @@
   .best_div {
     @apply hover:animate-pulse relative flex flex-col space-y-1 md:h-96 md:w-44 h-72 w-36 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
   }
+  .best_selling_title {
+    @apply flex text-lg font-semibold md:text-xl lg:text-3xl w-full text-gray-700 justify-center mx-auto text-center py-8 md:py-12 lg:py-16
+  }
   .best_img {
     @apply w-full h-56 md:h-72 bg-cover transition-all delay-300
   }
@@ -173,12 +176,33 @@
   .book_reviews {
     @apply flex border-b py-3 border-gray-400 flex-col space-y-3 mx-auto my-6 w-full px-4 md:px-12 lg:px-20 xl:px-24
   }
-  /*cartpage*/
+  /*============================cartpage=========================*/
+  .cart_page_main {
+    @apply grid grid-cols-12 gap-8 w-full px-3 md:px-1 md:w-4/5 mx-auto
+  }
+  .cart_page_div {
+    @apply col-span-12 lg:col-span-8 h-fit my-6 lg:my-12 space-y-3 lg:space-y-6
+  }
   .cartpage_div {
     @apply text-sm font-light font-['Lemon'] text-gray-700 my-4
   }
+  .book_class {
+    @apply flex-col space-y-3 gap-x-8 border-b border-gray-200 py-4
+  }
+  .bookcard {
+    @apply flex lg:col-span-8 col-span-6 flex-col justify-between h-full
+  }
   .cartpage_div_2 {
     @apply h-[80vh] col-span-12 lg:col-span-8 w-full flex flex-col space-y-3 px-4 lg:px-20 my-8 mx-auto justify-center items-center
+  }
+  .control_div {
+    @apply flex justify-between items-center
+  }
+  .control_btn {
+    @apply flex items-center border border-gray-200 rounded-md w-max
+  }
+  .heart_icon {
+    @apply text-lg text-red-400 h-4 lg:h-6 w-4 lg:w-6 cursor-pointer
   }
   .cartpage_p {
     @apply text-sm text-red-400 cursor-pointer hover:text-red-500 transition-all delay-200
@@ -194,6 +218,24 @@
   }
   .cartpage_x {
     @apply flex justify-center items-center cursor-pointer rounded-full  bg-red-400 h-9 w-9 text-center
+  }
+  .amount_details {
+    @apply col-span-12 lg:col-span-4 h-fit bg-gray-100 flex-col space-y-4 my-12 p-4
+  }
+  .total_price {
+    @apply text-sm font-['Lemon'] font-normal text-gray-700 slashed-zero
+  }
+  .price_btn {
+    @apply bg-red-400 rounded-sm p-4 w-full text-center text-white my-4 font-normal hover:bg-red-500 transition-all delay-300 
+  }
+  .amount_text {
+    @apply text-sm font-normal text-gray-600 slashed-zero
+  }
+  .amount_text_2 {
+    @apply cursor-pointer text-sm font-normal text-red-400
+  }
+  .book_title {
+    @apply text-sm w-52 lg:w-80 font-light text-gray-700 truncate
   }
 }
 
