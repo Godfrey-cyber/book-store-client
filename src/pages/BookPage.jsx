@@ -75,7 +75,7 @@ const BookPage = () => {
 	useEffect(() => {
 		const getBook = async() => {
 			try {
-				const response = await axios.get(`https://my-book-store-1oki.onrender.com/api/v1/books/getBook/${id}`, headers:{'Content-Type': 'aplication/json'})
+				const response = await axios.get(`https://my-book-store-1oki.onrender.com/api/v1/books/getBook/${id}`, headers:{'Content-Type': 'application/json'})
 				if (response.status === 200 || response.statusText === 'OK') {
 					setBook(response.data.data)
 					console.log(book)
