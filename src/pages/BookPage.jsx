@@ -75,7 +75,7 @@ const BookPage = () => {
 	useEffect(() => {
 		const getBook = async() => {
 			try {
-				const response = await axios.get(`https://my-book-store-1oki.onrender.com/api/v1/books/getBook/${id}`)
+				const response = await axios.get(`http://localhost:5000/api/v1/books/getBook/${id}`)
 				if (response.status === 200 || response.statusText === 'OK') {
 					setBook(response.data.data)
 					console.log(book)
@@ -95,8 +95,8 @@ const BookPage = () => {
 		<section className="w-full h-full bg-white">
 			<SmallHeader />
 			<LargeHeader />
-			<main className="grid grid-cols-12 md:gap-x-8 gap-y-8 w-full lg:px-20 px-4 md:px-8 mx-auto h-fit my-6">
-				<div className="col-span-12 lg:col-span-3 items-center justify-between flex-col space-y-4 w-full h-fit">
+			<main className="book_page_main">
+				<div className="book_page_1">
 					<div className="h-64 w-40 mx-auto">
 						<img onClick={() => navigate(`/book_details/${book._id}`)} className="h-full w-full bg-contain" src={book.photo} alt="" />
 					</div>
@@ -106,10 +106,10 @@ const BookPage = () => {
 					</span>
 				</div>
 
-				<div className="col-span-12 lg:col-span-9 flex flex-col space-y-4 h-fit w-full my-8">
+				<div className="book_page_div">
 					<div className="flex-col justify-center w-full">
-						<p className="text-xl md:text-2xl lg:text-4xl font-normal tex-gray-700">{book.title}</p>
-						<p className="text-lg font-light tex-gray-700 cursor-pointer hover:underline">By {book.author}</p>
+						<p className="book_page_title">{book.title}</p>
+						<p className="book_page_author">By {book.author}</p>
 						<span className="flex items-center cursor-pointer">
 							<FaStar className="page_icon" />
 							<FaStar className="page_icon" />
@@ -133,7 +133,7 @@ const BookPage = () => {
 				
 				
 					{/*qty buttons*/}
-					<div className="flex items-center border border-gray-200 rounded-md w-max">
+					<div className="qty_div">
 						<button disabled={arr <= 1} onClick={handleQtyDec} className="dec_btn">-</button>
 						<span className="items-center flex w-12">
 							<p className="text-sm text-gray-500 mx-auto">{ arr ? arr : 0 }</p>
@@ -151,19 +151,19 @@ const BookPage = () => {
 					<div className="flex flex-col space-y-4 my-8 w-full lg:w-1/2">
 						<p className="text-gray-700 font-semibold text-md">This edition</p>
 						<span className="flex items-center justify-between">
-							<p className="book_desc">Format</p>
+							<p className="book_desc">Format:</p>
 							<p className="book_desc">{book.pages} pages, Hardcover</p>
 						</span>
 						<span className="flex items-center justify-between">
-							<p className="book_desc">Published</p>
+							<p className="book_desc">Published:</p>
 							<p className="book_desc truncate">{book.year} by {book.author}</p>
 						</span>
 						<span className="flex items-center justify-between">
-							<p className="book_desc">ISBN</p>
+							<p className="book_desc">ISBN:</p>
 							<p className="book_desc">{!book.isbn ? '9781982146863 (ISBN10: 1982146869)' : 'ISBN'+ book.isbn}</p>
 						</span>
 						<span className="flex items-center justify-between">
-							<p className="book_desc">Language</p>
+							<p className="book_desc">Language:</p>
 							<p className="book_desc">English</p>
 						</span>
 					</div>

@@ -46,7 +46,7 @@ const Login = () => {
 				}
 			}
         } else {
-    		toast.error('Soory! Cannot log you without credentials')
+    		toast.error('Soory! • Cannot log you without credentials')
     	}
     } 
     const user = useSelector(selectUser)
