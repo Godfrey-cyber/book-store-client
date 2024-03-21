@@ -25,6 +25,9 @@
   .search_icon {
     @apply hover:text-red-600 text-red-500 transition delay-300 text-2xl font-light cursor-pointer mr-3
   }
+  .menu_icon {
+    @apply hover:text-red-600 text-red-500 transition delay-300 text-2xl font-light cursor-pointer
+  }
   .signin_btn {
     @apply text-sm font-medium border border-red-400 hover:divide-red-500 hover:bg-white text-white rounded-3xl bg-red-400 rounded-3xl hover:text-red-500 px-3 lg:px-5 py-1 lg:py-2 transition-all delay-300 ease-in-out duration-300 cursor-pointer
   }

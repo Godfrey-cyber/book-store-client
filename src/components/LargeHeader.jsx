@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { FaSearch } from "react-icons/fa"
+import { FiMenu } from "react-icons/fi";
 import { BsCart } from "react-icons/bs"
 import { useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
@@ -68,20 +69,20 @@ const LargeHeader = () => {
 	        	</div>
 		        {/*SEARCH*/}
 		        <div className="lg:flex flex-col relative hidden">
-			        <div className="flex space-x-2 items-center">
-			        	<FaSearch className="search_icon flex lg:hidden" />
+			        {/*<div className="flex space-x-2 items-center">
+			        	<FiMenu className="menu_icon flex lg:hidden" />*/}
 			        	<div className="search_div">
 				        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 				        	<FaSearch className="search_icon" />
 				        </div>
-			        </div>
+			        {/*</div>*/}
 			        {searchTerm && <div className="largeheader_div">
 			        	<span className="largeheader_span">
 			        		<span className="flex text-sm font-normal text-gray-800">Search results for <p className="text-sm font-semibold text-gray-800 ml-2">"{searchTerm}"</p></span>
 			        	</span>
 			        	{!loading ? searchResults && searchResults.map(book => (
 			        			<div key={book._id} onClick={() => navigate(`/book_details/${book._id}`)} className="group flex space-x-3 cursor-pointer hover:bg-gray-100">
-			        				<img src={book.photo} className="h-24 w-16 rounded" alt="" />
+			        				<img src={book.photo} className="h-24 w-16 rounded" alt={book.photo} />
 			        				<span className="flex flex-col justify-between p-2">
 			        					<p className="text-sm font-semibold text-gray-800 group-hover:text-red-400 transition-all delay-200">{book.title}</p>
 			        					<p className="text-xs font-normal text-gray-700">by {book.author}</p>
@@ -105,10 +106,17 @@ const LargeHeader = () => {
 		    </div>
 		{/*search bar*/}
 		    <div className="flex-col relative flex lg:hidden w-full md:w-3/5 mx-auto mb-3">
-		        <div className="search_div">
+		        {/*<div className="search_div">
 		        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 		        	<FaSearch className="search_icon" />
-		        </div>
+		        </div>*/}
+		        <div className="flex space-x-2 items-center">
+			        <FiMenu className="menu_icon flex lg:hidden" />
+			        <div className="search_div">
+				        <input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
+				        <FaSearch className="search_icon" />
+				    </div>
+			     </div>
 		        {searchTerm && <div className="largeheader_div overflow-y-hidden">
 		        	<span className="largeheader_span">
 		        		<span className="flex text-sm font-normal text-gray-800">Search results for <p className="text-sm font-semibold text-gray-800 ml-2">"{searchTerm}"</p></span>
