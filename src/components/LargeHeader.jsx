@@ -68,9 +68,12 @@ const LargeHeader = () => {
 	        	</div>
 		        {/*SEARCH*/}
 		        <div className="lg:flex flex-col relative hidden">
-			        <div className="search_div">
-			        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
-			        	<FaSearch className="search_icon" />
+			        <div className="flex space-x-2">
+			        	<div className="search_div">
+				        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
+				        	<FaSearch className="search_icon" />
+				        </div>
+				        <FaSearch className="search_icon" />
 			        </div>
 			        {searchTerm && <div className="largeheader_div">
 			        	<span className="largeheader_span">
