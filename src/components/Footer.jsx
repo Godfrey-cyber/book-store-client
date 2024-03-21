@@ -5,7 +5,7 @@ const Footer = () => {
 	return (
 		<section className="w-full h-fit bg-gray-100 pt-12">
 			<div className="grid grid-cols-12 gap-8 w-4/5 mx-auto">
-				<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4">
+				<div className="col-span-6 lg:col-span-3 flex flex-col space-y-4">
 					<span className="flex h-10 cursor-pointer w-auto">
 	        			<img className="w-full h-full" src="https://preview.colorlib.com/theme/abcbook/assets/img/logo/logo.png" />
 	        		</span>
@@ -17,14 +17,14 @@ const Footer = () => {
 						<FaLinkedin className="hover:text-blue-600 footer_icons" />
 					</div>
 				</div>
-				<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4">
+				<div className="col-span-6 lg:col-span-3 flex flex-col space-y-4">
 					<p className="footer_p">Book Category</p>
 					<p className="footer_text">Horror Thriller</p>
 					<p className="footer_text">Love Stories</p>
 					<p className="footer_text">Science & Fiction</p>
 					<p className="footer_text">Business</p>
 				</div>
-				<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4">
+				<div className="col-span-6 lg:col-span-3 flex flex-col space-y-4">
 					<p className="footer_p">Book Category</p>
 					<p className="footer_text">Biography</p>
 					<p className="footer_text">Astrology</p>
@@ -32,7 +32,7 @@ const Footer = () => {
 					<p className="footer_text">Software development</p>
 					<p className="footer_text">E-commerce</p>
 				</div>
-				<div className="col-span-12 lg:col-span-3 flex flex-col space-y-4">
+				<div className="col-span-6 lg:col-span-3 flex flex-col space-y-4">
 					<p className="footer_p">Site Map</p>
 					<p className="footer_text">About Us</p>
 					<p className="footer_text">Home</p>
@@ -40,7 +40,7 @@ const Footer = () => {
 					<p className="footer_text">Blog</p>
 					<p className="footer_text">Contact</p>
 				</div>
-				<div className="col-span-12 flex flex-col space-y-4 my-6 mx-auto">
+				<div className="col-span-6 flex flex-col space-y-4 my-6 mx-auto">
 					<p className="text-sm text-gray-700 font-light">Copyright ©2023 All rights reserved | This website is made with 💓 by Godfrey</p>
 				</div>
 			</div>
