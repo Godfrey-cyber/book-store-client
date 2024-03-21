@@ -44,7 +44,7 @@ const Footer = () => {
 					<p className="text-sm text-gray-700 font-light">Copyright ©2023 All rights reserved | This website is made with 💓 by Godfrey</p>
 				</div>*/}
 			</div>
-			<div className="col-span-12 flex flex-col space-y-4 my-6 mx-auto">
+			<div className="col-span-12 flex flex-col space-y-4 w-4/5 my-6 mx-auto">
 				<p className="text-sm text-gray-700 font-light">Copyright ©2023 All rights reserved | This website is made with 💓 by Godfrey</p>
 			</div>
 		</section>
