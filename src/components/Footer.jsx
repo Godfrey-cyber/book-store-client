@@ -3,7 +3,7 @@ import { FaYoutube, FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa"
 
 const Footer = () => {
 	return (
-		<section className="w-full h-fit bg-gray-100 pt-12">
+		<section className="w-full h-fit bg-gray-100 pt-12 flex-col space-y-3">
 			<div className="grid grid-cols-12 gap-8 w-4/5 mx-auto">
 				<div className="col-span-6 lg:col-span-3 flex flex-col space-y-4">
 					<span className="flex h-10 cursor-pointer w-auto">
@@ -40,9 +40,12 @@ const Footer = () => {
 					<p className="footer_text">Blog</p>
 					<p className="footer_text">Contact</p>
 				</div>
-				<div className="col-span-6 flex flex-col space-y-4 my-6 mx-auto">
+				{/*<div className="col-span-6 flex flex-col space-y-4 my-6 mx-auto">
 					<p className="text-sm text-gray-700 font-light">Copyright ©2023 All rights reserved | This website is made with 💓 by Godfrey</p>
-				</div>
+				</div>*/}
+			</div>
+			<div className="col-span-12 flex flex-col space-y-4 my-6 mx-auto">
+				<p className="text-sm text-gray-700 font-light">Copyright ©2023 All rights reserved | This website is made with 💓 by Godfrey</p>
 			</div>
 		</section>
 	)
