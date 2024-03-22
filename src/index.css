@@ -50,6 +50,9 @@
   .cta_media {
     @apply flex space-x-2 font-light text-sm text-gray-600 items-center
   }
+  .cta_media_2 {
+    @apply flex space-x-2 font-light text-sm text-gray-600 
+  }
   /*=========================BestSelling==================*/
   .best_div {
     @apply hover:animate-pulse relative flex flex-col space-y-1 md:h-96 md:w-44 h-72 w-36 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
