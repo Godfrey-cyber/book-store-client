@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { FaSearch } from "react-icons/fa"
 import { FiMenu } from "react-icons/fi";
+import { RxCross2 } from "react-icons/rx";
 import { BsCart } from "react-icons/bs"
 import { useNavigate } from "react-router-dom"
 import { useSelector, useDispatch } from "react-redux"
@@ -13,6 +14,8 @@ import '../App.css'
 
 const LargeHeader = () => {
 	const [scrolled, setIsScrolled] = useState(false)
+	const [showMenu, setShowMenu] = useState(false)
+	const [categories, setCategories] = useState([])
 	const navigate = useNavigate()
 	const dispatch = useDispatch()
 	const [searchTerm, setSearchTerm] = useState("")
@@ -55,7 +58,31 @@ const LargeHeader = () => {
 		}
 		handleSearch()
 	}, [searchTerm])
+
+	useEffect(() => {
+		const getCategories = async() => {
+			try { 
+				const response = await axios.get('https://my-book-store-1oki.onrender.com/api/v1/categories/get-categories')
+				if (response && response?.status === 200 || response.statusText === "OK") {
+					setCategories(response.data.data)
+					// console.log(categories)
+				}
+			} catch(error) {
+				if (error || !response?.status === 200 || !response?.statusText === 'OK') {
+					console.error('❗Error fetching data❌:', error.message);
+					// console.log(categories)
+				}
+			}
+		}
+		getCategories()
+	}, [])
 	
+	const showMenubar = () => {
+		setShowMenu(prevState => !prevState)
+	}
+	// const hideMenubar = () => {
+	// 	setShowMenu(prevState => !prevState)
+	// }
 
 	const { isFetching, error, errMsg } = useSelector(state => state.user)
 	
@@ -67,6 +94,20 @@ const LargeHeader = () => {
 		        		<img className="w-full h-full" src="https://preview.colorlib.com/theme/abcbook/assets/img/logo/logo.png" />
 		        	</span>
 	        	</div>
+	        	{/*MENU*/}
+	        	{showMenu && <div className="absolute flex flex-col w-screen h-screen top-0 left-0 bottom-0 bg-red-200 z-40">
+	        		<div className="flex flex-col w-4/5 h-full bg-red-100 p-2">
+	        			<RxCross2 onClick={() => setShowMenu(prevState => !prevState)} className="menu_icon flex lg:hidden z-40" />
+	        			<div className="flex-col space-y-2 mt-4">
+	        				{/*<div className="space-y-2 lg:flex flex-wrap space-x-2 items-center h-40 lg:h-auto">*/}
+							{categories.length > 0 && categories.slice(0, 5).map(category => (
+								<span key={category._id} className="py-2 bg-white hover:bg-red-200 hover:text-red-200 transition delay-200">{category.title}</span>
+						))}
+					{/*</div>*/}
+	        			</div>
+	        		</div>
+	        		
+	        	</div>}
 		        {/*SEARCH*/}
 		        <div className="lg:flex flex-col relative hidden">
 			        {/*<div className="flex space-x-2 items-center">
@@ -110,8 +151,8 @@ const LargeHeader = () => {
 		        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 		        	<FaSearch className="search_icon" />
 		        </div>*/}
-		        <div className="flex space-x-2 items-center">
-			        <FiMenu className="menu_icon flex lg:hidden" />
+		        <div className="flex space-x-2 items-center w-full justify-between">
+			        <FiMenu onClick={() => setShowMenu(prevState => !prevState)} className="menu_icon flex lg:hidden" />
 			        <div className="search_div">
 				        <input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 				        <FaSearch className="search_icon" />
