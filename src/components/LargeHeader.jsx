@@ -99,10 +99,10 @@ const LargeHeader = () => {
 	        		<div className="flex flex-col w-4/5 h-full bg-white p-2 z-50">
 	        			<RxCross2 onClick={() => setShowMenu(prevState => !prevState)} className="menu_icon flex lg:hidden z-50 sticky top-6 left-6" />
 	        			{/*MENU-LIST*/}
-	        			<div className="flex-col space-y-.5 px-2 mt-4 w-full">
+	        			<div className="flex-col space-y-.2 px-2 mt-4 w-full">
 							{categories && categories.length > 0 && categories.slice(0, 5).map(category => (
 							<div className="flex justify-between border border-gray-100 px-1 items-center bg-white hover:bg-red-200 hover:text-red-200 transition delay-200">
-								<span key={category._id} className="py-1">{category.title}</span>
+								<span key={category._id} className="py-1 text-lg">{category.title}</span>
 								<FaChevronDown className="menu_icon" />
 							</div>
 						))}
