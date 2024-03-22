@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { FaSearch, FaChevronDown } from "react-icons/fa"
+import { FaYoutube, FaFacebook, FaInstagram, FaPhoneAlt } from "react-icons/fa"
+import { IoMdMail, IoMdTime } from "react-icons/io"
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { BsCart } from "react-icons/bs"
@@ -106,6 +108,15 @@ const LargeHeader = () => {
 								<FaChevronDown className="menu_icon" />
 							</div>
 						))}
+							<span className="flex space-x-2 text-gray-500 text-sm items-center">
+								<IoMdTime className="hidden sm:flex media_icon hover:text-red-600" />
+								<p className="hidden sm:flex text-xs lg:text-sm font-light text-gray-600">Openning Hours 10.00 am - 6.00 pm</p>	
+							</span>
+							<div className="flex space-x-3 items-center" >
+								<FaFacebook className="hover:text-blue-600 media_icon" />
+								<FaInstagram className="hover:text-yellow-600 media_icon" />
+								<FaYoutube className="hover:text-red-600 media_icon" />
+							</div>
 	        			</div>
 	        		</div>
 	        	</div>}
