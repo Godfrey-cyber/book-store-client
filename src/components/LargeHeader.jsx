@@ -103,14 +103,14 @@ const LargeHeader = () => {
 	        			{/*MENU-LIST*/}
 	        			<div className="flex-col space-y-.2 px-2 mt-4 w-full">
 							{categories && categories.length > 0 && categories.slice(0, 5).map(category => (
-							<div className="flex justify-between border border-gray-100 px-1 items-center bg-white hover:bg-red-200 hover:text-red-200 transition delay-200">
+							<div className="flex justify-between border-b border-gray-100 px-1 items-center bg-white hover:bg-red-200 hover:text-red-200 transition delay-200">
 								<span key={category._id} className="py-1 text-lg">{category.title}</span>
 								<FaChevronDown className="menu_icon" />
 							</div>
 						))}
-							<span className="flex space-x-2 text-gray-500 text-sm items-center">
-								<IoMdTime className="hidden sm:flex media_icon hover:text-red-600" />
-								<p className="hidden sm:flex text-xs lg:text-sm font-light text-gray-600">Openning Hours 10.00 am - 6.00 pm</p>	
+							<span className="flex space-x-2 text-gray-500 text-sm items-center my-4">
+								<IoMdTime className="flex media_icon hover:text-red-600" />
+								<p className="flex text-sm font-light text-gray-600">Openning Hours 10.00 am - 6.00 pm</p>	
 							</span>
 							<div className="flex space-x-3 items-center" >
 								<FaFacebook className="hover:text-blue-600 media_icon" />
