@@ -127,6 +127,8 @@ const LargeHeader = () => {
 									<p className="text-sm font-light text-gray-600">+254 7123 8456</p>
 								</span>
 							</div>
+							{!user ? <button onClick={() => navigate("/sign_up")} type="button" className="signin_btn lg:hidden flex">Log In</button> : 
+		        			<button onClick={() => logoutUser(dispatch)} type="button" className="signin_btn lg:hidden flex">Log Out</button>}
 	        			</div>
 	        		</div>
 	        	</div>}

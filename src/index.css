@@ -42,7 +42,7 @@
   }
    /*========================small header========================*/
   .media_icon {
-    @apply text-gray-400 transition delay-300 text-lg sm:text-sm cursor-pointer
+    @apply text-red-400 lg:text-gray-400 transition delay-300 text-xl lg:text-sm cursor-pointer
   }
    .sell_book {
     @apply text-sm font-light hover:text-gray-700 hover:text-red-500 hover:font-medium hover:underline transition-all delay-300 text-gray-600 cursor-pointer
