@@ -22,6 +22,12 @@
   right: 0;
 }
 
+.blur-class {
+  /*filter: blur(2px);*/
+  z-index: 30;
+  background-color: rgba(0,0,0, 0.8);
+}
+
 .progress[value] {
   -webkit-appearance: none;
    appearance: none;

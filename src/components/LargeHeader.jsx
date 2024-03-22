@@ -95,9 +95,9 @@ const LargeHeader = () => {
 		        	</span>
 	        	</div>
 	        	{/*MENU*/}
-	        	{showMenu && <div className="absolute flex flex-col w-screen h-screen top-0 left-0 bottom-0 blur-sm z-40">
-	        		<div className="flex flex-col w-4/5 h-full bg-white p-2">
-	        			<RxCross2 onClick={() => setShowMenu(prevState => !prevState)} className="menu_icon flex lg:hidden z-40" />
+	        	{showMenu && <div className="fixed flex flex-col w-screen h-screen right-0 top-0 left-0 bottom-0 blur-class ">
+	        		<div className="flex flex-col w-4/5 h-full bg-white p-2 z-50">
+	        			<RxCross2 onClick={() => setShowMenu(prevState => !prevState)} className="menu_icon flex lg:hidden z-50 sticky top-6 left-6" />
 	        			{/*MENU-LIST*/}
 	        			<div className="flex-col space-y-.5 px-2 mt-4 w-full">
 							{categories && categories.length > 0 && categories.slice(0, 5).map(category => (
