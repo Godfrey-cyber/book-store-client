@@ -8,7 +8,7 @@
     @apply transition delay-300 flex h-[110px] lg:h-[60px] relative justify-between items-center w-full bg-gray-100 shadow-xl shadow-gray-600 border-b z-10 border-gray-300 px-4 lg:px-20
   }
   .search_div {
-    @apply flex lg:inline-flex justify-between items-center rounded-3xl border border-gray-500 lg:w-96 h-8 p-1
+    @apply flex flex-1 lg:inline-flex items-center rounded-3xl border border-gray-500 lg:w-96 h-8 p-1
   }
   .search_div_1 {
     /*@apply flex justify-between lg:hidden items-center rounded-3xl border border-gray-500 min-w-36 max-w-full h-10 p-1*/
