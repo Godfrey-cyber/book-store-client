@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { FaSearch } from "react-icons/fa"
+import { FaSearch, FaChevronDown } from "react-icons/fa"
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
 import { BsCart } from "react-icons/bs"
@@ -98,10 +98,13 @@ const LargeHeader = () => {
 	        	{showMenu && <div className="absolute flex flex-col w-screen h-screen top-0 left-0 bottom-0 bg-red-200 z-40">
 	        		<div className="flex flex-col w-4/5 h-full bg-red-100 p-2">
 	        			<RxCross2 onClick={() => setShowMenu(prevState => !prevState)} className="menu_icon flex lg:hidden z-40" />
-	        			<div className="flex-col space-y-2 mt-4 w-full">
+	        			<div className="flex-col space-y-.5 px-2 mt-4 w-full">
 	        				{/*<div className="space-y-2 lg:flex flex-wrap space-x-2 items-center h-40 lg:h-auto">*/}
 							{categories && categories.length > 0 && categories.slice(0, 5).map(category => (
-								<div key={category._id} className="py-2 bg-white hover:bg-red-200 hover:text-red-200 transition delay-200">{category.title}</div>
+								<div className="flex justify-between items-center">
+									<span key={category._id} className="py-2 bg-white hover:bg-red-200 hover:text-red-200 transition delay-200">{category.title}</span>
+									<FaChevronDown className="menu_icon" />
+								</div>
 						))}
 					{/*</div>*/}
 	        			</div>
