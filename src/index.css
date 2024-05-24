@@ -61,7 +61,7 @@
     @apply flex text-lg font-semibold md:text-xl lg:text-3xl w-full text-gray-700 justify-center mx-auto text-center py-8 md:py-12 lg:py-16
   }
   .best_img {
-    @apply w-full h-56 md:h-72 bg-cover transition-all delay-300
+    @apply w-full h-64 md:h-72 bg-cover transition-all delay-300
   }
   .best_icons {
     @apply hidden md:flex text-xs md:text-sm text-red-500
