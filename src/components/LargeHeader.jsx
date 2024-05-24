@@ -110,13 +110,25 @@ const LargeHeader = () => {
 						))}
 							<span className="flex space-x-2 text-gray-500 text-sm items-center my-4">
 								<IoMdTime className="flex media_icon hover:text-red-600" />
-								<p className="flex text-sm font-light text-gray-600">Openning Hours 10.00 am - 6.00 pm</p>	
+								<p className="flex text-sm font-light text-gray-600">Open from 10.00 am - 6.00 pm</p>	
 							</span>
 							<div className="flex space-x-3 items-center" >
 								<FaFacebook className="hover:text-blue-600 media_icon" />
 								<FaInstagram className="hover:text-yellow-600 media_icon" />
 								<FaYoutube className="hover:text-red-600 media_icon" />
 							</div>
+							<div className="flex-col space-y-3 my-4">
+								<span className="cta_media_2">
+									<IoMdMail className="hover:text-red-600 media_icon" />
+									<p className="flex text-sm font-light text-gray-600">reallygreat@gmail.com</p>	 
+								</span>
+								<span className="cta_media_2">
+									<FaPhoneAlt className="hover:text-red-600 media_icon" />
+									<p className="text-sm font-light text-gray-600">+254 7123 8456</p>
+								</span>
+							</div>
+							{!user ? <button onClick={() => navigate("/sign_up")} type="button" className="signin_btn lg:hidden flex">Log In</button> : 
+		        			<button onClick={() => logoutUser(dispatch)} type="button" className="signin_btn lg:hidden flex">Log Out</button>}
 	        			</div>
 	        		</div>
 	        	</div>}
