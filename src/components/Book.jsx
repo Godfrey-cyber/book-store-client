@@ -4,6 +4,8 @@ import { FaStar, FaStarHalfStroke } from "react-icons/fa6"
 
 const Book = ({ book }) => {
 	const navigate = useNavigate()
+	console.log('object')
+	console.log('object')
 	return (
 		<div onClick={() => navigate(`/book_details/${book._id}`)} key={book._id} className="best_div group">
 			<img className="best_img group-hover:rounded-t-md" src={book.photo} alt="" />
