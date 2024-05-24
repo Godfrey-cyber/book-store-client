@@ -15,12 +15,10 @@ const MoreBooks = () => {
 				const response = await axios.get('https://my-book-store-1oki.onrender.com/api/v1/categories/get-categories')
 				if (response && response?.status === 200 || response.statusText === "OK") {
 					setCategories(response.data.data)
-					// console.log(categories)
 				}
 			} catch(error) {
 				if (error || !response?.status === 200 || !response?.statusText === 'OK') {
 					console.error('❗Error fetching data❌:', error.message);
-					// console.log(categories)
 				}
 			}
 		}

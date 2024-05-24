@@ -52,7 +52,7 @@
   }
   /*=========================BestSelling==================*/
   .best_div {
-    @apply hover:animate-pulse relative flex flex-col space-y-1 md:h-96 md:w-44 h-72 w-36 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
+    @apply hover:animate-pulse relative flex flex-col space-y-1 md:h-96 md:w-44 h-72 w-44 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
   }
   .best_selling_title {
     @apply flex text-lg font-semibold md:text-xl lg:text-3xl w-full text-gray-700 justify-center mx-auto text-center py-8 md:py-12 lg:py-16
