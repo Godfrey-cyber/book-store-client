@@ -55,7 +55,7 @@
   }
   /*=========================BestSelling==================*/
   .best_div {
-    @apply hover:animate-pulse relative flex flex-col space-y-1 md:h-96 md:w-44 h-80 w-44 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
+    @apply hover:animate-pulse relative flex flex-col space-y-1 md:h-96 md:w-48 h-80 w-44 shadow-2xl shadow-gray-200 rounded-md cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300 mx-auto
   }
   .best_selling_title {
     @apply flex text-lg font-semibold md:text-xl lg:text-3xl w-full text-gray-700 justify-center mx-auto text-center py-8 md:py-12 lg:py-16
@@ -69,6 +69,12 @@
   /*=======================Featured============================*/
   .featured_div {
     @apply h-80 w-48 shadow-2xl shadow-gray-200 cursor-pointer hover:shadow-2xl hover:shadow-pink-300 transition-all delay-300
+  }
+  .featured {
+    @apply flex-col lg:flex lg:flex-row space-y-4 lg:items-center lg:justify-between
+  }
+  .featured_1 {
+    @apply col-span-12 lg:col-span-8 bg-red-500 p-4 flex space-x-4 items-center
   }
   .featured_btn {
     @apply bg-red-500 rounded-3xl text-white hover:text-red-500 hover:bg-white px-2 py-3 w-2/5 border-white border transition-all delay-300
@@ -260,6 +266,13 @@
   }
   .book_title {
     @apply text-sm w-52 lg:w-80 font-light text-gray-700 truncate
+  }
+  /*community eviews*/
+  .fa-star {
+    @apply text-2xl lg:text-3xl text-red-500
+  }
+  .reviews_title {
+    @apply flex text-center justify-center w-full text-center text-gray-700 font-normal text-2xl lg:text-3xl
   }
 }
 

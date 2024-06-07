@@ -134,8 +134,6 @@ const LargeHeader = () => {
 	        	</div>}
 		        {/*SEARCH*/}
 		        <div className="lg:flex flex-col relative hidden">
-			        {/*<div className="flex space-x-2 items-center">
-			        	<FiMenu className="menu_icon flex lg:hidden" />*/}
 			        	<div className="search_div">
 				        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
 				        	<FaSearch className="search_icon" />
@@ -171,10 +169,6 @@ const LargeHeader = () => {
 		    </div>
 		{/*search bar*/}
 		    <div className="flex-col relative flex lg:hidden w-full md:w-3/5 mx-auto mb-3">
-		        {/*<div className="search_div">
-		        	<input value={searchTerm} onChange={(event) => setSearchTerm(event.target.value)} type="text" className="search_input" placeholder="Search book by author, title or publisher" />
-		        	<FaSearch className="search_icon" />
-		        </div>*/}
 		        <div className="flex space-x-2 items-center w-full justify-between">
 			        <FiMenu onClick={() => setShowMenu(prevState => !prevState)} className="menu_icon flex lg:hidden" />
 			        <div className="search_div">
