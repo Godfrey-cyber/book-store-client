@@ -8,8 +8,8 @@ const Book = ({ book }) => {
 		<div onClick={() => navigate(`/book_details/${book._id}`)} key={book._id} className="best_div group">
 			<img className="best_img group-hover:rounded-t-md" src={book.photo} alt="" />
 			<div className="flex flex-col space-y-.5 px-2">
-				<p className="text-sm md:text-lg font-normal md:font-medium text-gray-700 truncate">{book?.title.length > 19 ? book.title?.slice(0, 19)+ '...' : book.title}</p>
-				<p className="text-sm md:text-lg font-light text-gray-500 truncate">{!book.author ? "J. R Rain" : book.author.length > 18 ? book.author.slice(0, 18)+ '...' : book.author}</p>
+				<p className="text-sm font-normal md:font-medium text-gray-700 truncate">{book?.title.length > 19 ? book.title?.slice(0, 19)+ '...' : book.title}</p>
+				<p className="text-sm font-light text-gray-500 truncate">{!book.author ? "J. R Rain" : book.author.length > 18 ? book.author.slice(0, 18)+ '...' : book.author}</p>
 				<span className="flex items-center hidden lg:flex">
 					<FaStar className="best_icons" />
 					<FaStar className="best_icons" />
@@ -18,8 +18,8 @@ const Book = ({ book }) => {
 					<FaStarHalfStroke className="text-sm text-red-500" />
 				</span>
 				<span className="flex items-center justify-between">
-					<p className="text-sm md:text-lg text-gray-700">(120 Review)</p>
-					<p className="text-sm md:text-lg lg:font-bold text-red-500">Ksh. {book.price}</p>
+					<p className="text-sm text-gray-700">(120 Review)</p>
+					<p className="text-sm lg:font-bold text-red-500">Ksh. {book.price}</p>
 				</span>
 			</div>
 		</div>
