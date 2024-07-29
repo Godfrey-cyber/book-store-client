@@ -19,7 +19,7 @@ const Book = ({ book }) => {
 				</span>
 				<span className="flex items-center justify-between">
 					<p className="text-sm text-gray-700">(120 Review)</p>
-					<p className="text-sm lg:font-bold text-red-500">Ksh. {book.price}</p>
+					<p className="text-sm lg:font-bold text-red-500 mx-2">Ksh. {book.price}</p>
 				</span>
 			</div>
 		</div>
