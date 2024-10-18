@@ -44,21 +44,7 @@ const LargeHeader = () => {
 	}, [scrolled])
 
 	useEffect(() => {
-		const handleSearch = async () => {
-			// event.preventDefault()
-			try {
-				const response = await axios.get(`https://my-book-store-1oki.onrender.com/api/v1/books/getAllBooks?search=${searchTerm}`)
-				if (response && response.status === 200 || response.statusText === 'OK') {
-					setSearchResults(response.data.data)
-					setLoading(false)
-				}
-			} catch (error) {
-				if (error || !res.status === 200 || !res.statusText === 'OK') {
-					console.log(error)
-				}
-			}
-		}
-		handleSearch()
+		handleSearch(searchTerm, searchResults, setLoading)
 	}, [searchTerm])
 
 	useEffect(() => {
@@ -120,7 +106,7 @@ const LargeHeader = () => {
 							<div className="flex-col space-y-3 my-4">
 								<span className="cta_media_2">
 									<IoMdMail className="hover:text-red-600 media_icon" />
-									<p className="flex text-sm font-light text-gray-600">reallygreat@gmail.com</p>	 
+									<p className="flex text-sm font-light text-gray-900">reallygreat@gmail.com</p>	 
 								</span>
 								<span className="cta_media_2">
 									<FaPhoneAlt className="hover:text-red-600 media_icon" />
