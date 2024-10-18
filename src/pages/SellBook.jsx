@@ -10,6 +10,7 @@ import { modules, formats } from "../assets/utilities"
 import SmallHeader from "../components/SmallHeader.jsx"
 import LargeHeader from "../components/LargeHeader.jsx"
 import { useNavigate } from 'react-router-dom'
+import { getCategories, createBook } from "../apiCalls.js"
 import axios from "axios"
 
 const SellBook = () => {
@@ -45,18 +46,6 @@ const SellBook = () => {
     // console.log(info)
  	// category fetch
  	useEffect(() => {
- 		const getCategories = async() => {
- 			try {
- 				const res = await axios.get("https://my-book-store-1oki.onrender.com/api/v1/categories/get-categories")
- 				if (res.status === 200 || res.statusText === 'OK') {
-           			setCategory(res.data.data)
-				}
- 			} catch (error) {
- 				if (error || !res.status === 200 || !res.statusText === 'OK') {
-					toast.error(error?.response?.data?.msg)
-				}
- 			}
- 		}
  		getCategories()
  	},[])
 
@@ -67,40 +56,7 @@ const SellBook = () => {
     	}
  	}
 
-	const createBook = async(event) => {
-		event.preventDefault()
-
-		// const formData = new FormData()
-		// formData.set("title", title)
-		// formData.set("price", price)
-		// formData.set("desc", desc)
-		// formData.set("inStock", inStock)
-		// formData.set("author", author)
-		// formData.set("isbn", isbn)
-		// formData.set("photo", photo)
-		// formData.set("pages", pages)
-		// formData.set("year", year)
-		// formData.set("condition", condition)
-		// formData.set("discount", discount)
-		// formData.set("catId", catId)
-		// formData.set("language", language)
-
-		try {
-			const res = await axios.post("https://my-book-store-1oki.onrender.com/api/v1/books/create-book", { title, price, photo, isbn, year, pages, discount, inStock, desc, language, condition, author, catId, catName }, { withCredentials: true })
-			console.log(res)
-			if (res.status === 201 || res.statusText === 'OK') {
-				setRedirect(true)
-				console.log(res)
-				toast.success("Book successfully created")
-			}
-		} catch (error) {
-			if (error || !res.status === 201 || !res.statusText === 'OK') {
-				// toast.error(error?.response.data)
-				console.log(error)
-			}
-		}
-		console.log(bookData)
-	}
+	createBook(setRedirect, event, title, price, photo, isbn, year, pages, discount, inStock, desc, language, condition, author, catId, catName)
 
 
 	if (redirect) {

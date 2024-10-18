@@ -4,6 +4,7 @@ import { image_1, image_2, image_3 } from "../assets/images"
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { useSelector, useDispatch } from "react-redux"
 import { selectUser, registerSuccess, registerStart, registerFailure, registerError } from "../Redux/Slices/userSlice.js"
+import { handleSubmit } from "../apiCalls.js"
 import { register } from "../Redux/apiCalls"
 import { toast } from 'react-toastify';
 import axios from "axios"
@@ -24,30 +25,7 @@ const SignIn = () => {
     }
     const { username, password, email } = formData
     // submit form data
-    const handleSubmit = async (event) => {
-        event.preventDefault()
-        dispatch(registerStart())
-        if (!password == "" || !email == "" || !username == "") {
-			try {
-				const res = await axios.post("https://my-book-store-1oki.onrender.com/api/v1/users/register", formData, { withCredentials: true })
-				if (res.status === 201 || res.statusText === 'OK') {
-					dispatch(registerSuccess(res.data))
-					setFormData({email: "", password: "", username: ""})
-					console.log(res)
-					navigate("/")
-					toast.success("Congratulation🎉, Welcome")
-				}
-			} catch (error) {
-				if (error || !res.status === 201 || !res.statusText === 'OK') {
-					toast.error(error?.response?.data?.msg)
-					console.log(error)
-					dispatch(registerFailure(error?.response?.data?.msg))
-				}
-			}
-		} else {
-			console.log("Please Enter all fields")
-		}
-    }
+    handleSubmit(event, password, email, username, navigate, formData, dispatch, setFormData)
     // check pasword length
     const checkPassword = (password) => {
         if (password.length < 8) {
