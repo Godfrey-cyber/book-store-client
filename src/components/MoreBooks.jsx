@@ -3,6 +3,7 @@ import axios from 'axios'
 import { useNavigate } from "react-router-dom"
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6"
 import Book from "./Book.jsx"
+import { getCategories, getBooks } from "../apiCalls.js"
 
 const MoreBooks = () => {
 	const [categories, setCategories] = useState([])
@@ -10,37 +11,12 @@ const MoreBooks = () => {
 	const navigate = useNavigate()
 	// const 
 	useEffect(() => {
-		const getCategories = async() => {
-			try { 
-				const response = await axios.get('https://my-book-store-1oki.onrender.com/api/v1/categories/get-categories')
-				if (response && response?.status === 200 || response.statusText === "OK") {
-					setCategories(response.data.data)
-				}
-			} catch(error) {
-				if (error || !response?.status === 200 || !response?.statusText === 'OK') {
-					console.error('❗Error fetching data❌:', error.message);
-				}
-			}
-		}
-		getCategories()
+		getCategories(setCategories)
 	}, [])
-
 
 	// const 
 	useEffect(() => {
-		const getBooks = async() => {
-			try {
-				const response = await axios.get('https://my-book-store-1oki.onrender.com/api/v1/books/getAllBooks')
-				if (response && response?.status === 200 || response.statusText === "OK") {
-					setBooks(response?.data?.data)
-				}
-			} catch(error) {
-				if (error || !response?.status === 200 || !response?.statusText === 'OK') {
-					console.error('❗Error fetching data❌:', error.message);
-				}
-			}
-		}
-		getBooks()
+		getBooks(setBooks)
 	}, [])
 	return (
 		<section className="flex flex-col w-full gap-y-6 bg-white h-auto py-4">

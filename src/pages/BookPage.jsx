@@ -10,6 +10,7 @@ import SmallHeader from "../components/SmallHeader"
 import LargeHeader from "../components/LargeHeader"
 import RatingsReview from "../components/RatingsReview"
 import CommunityReviews from "../components/CommunityReviews"
+import { getBook } from "../apiCalls.js"
 import Footer from "../components/Footer"
 
 const BookPage = () => {
@@ -73,23 +74,7 @@ const BookPage = () => {
 	const [count, setCount] = useState(arr ? arr : 0)
 	console.log(arr)
 	useEffect(() => {
-		const getBook = async() => {
-			try {
-				const response = await axios.get(`https://my-book-store-1oki.onrender.com/api/v1/books/getBook/${id}`)
-				if (response.status === 200 || response.statusText === 'OK') {
-					setBook(response.data.data)
-					console.log(book)
-					console.log(response.data.data)
-				} else {
-					console.log('error')
-				}
-			} catch(error) {
-				if (error || !response.status === 200 || !response.statusText === 'OK') {
-					console.error('❗Error fetching data❌:', error.message);
-				}
-			}
-		}
-		getBook()
+		getBook(id, setBook)
 	}, [id])
 	return (
 		<section className="w-full h-full bg-white">

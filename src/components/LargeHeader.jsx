@@ -11,7 +11,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { selectTotal, totalCartCount, cartItems } from "../Redux/Slices/cartSlice.js"
 import { selectUser } from "../Redux/Slices/userSlice.js"
 import { selectBook } from "../Redux/Slices/bookSlice.js"
-import { logoutUser } from "../Redux/apiCalls"
+import { logoutUser, getCategories } from "../Redux/apiCalls"
 import '../App.css'
 
 const LargeHeader = () => {
@@ -48,21 +48,7 @@ const LargeHeader = () => {
 	}, [searchTerm])
 
 	useEffect(() => {
-		const getCategories = async() => {
-			try { 
-				const response = await axios.get('https://my-book-store-1oki.onrender.com/api/v1/categories/get-categories')
-				if (response && response?.status === 200 || response.statusText === "OK") {
-					setCategories(response.data.data)
-					// console.log(categories)
-				}
-			} catch(error) {
-				if (error || !response?.status === 200 || !response?.statusText === 'OK') {
-					console.error('❗Error fetching data❌:', error.message);
-					// console.log(categories)
-				}
-			}
-		}
-		getCategories()
+		getCategories(setCategories)
 	}, [])
 	
 	const showMenubar = () => {

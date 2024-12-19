@@ -6,6 +6,7 @@ import { MdAddShoppingCart } from "react-icons/md";
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6"
 import { useDispatch, useSelector } from 'react-redux'
 import { addBook, items, getTotal, getCartCount } from '../Redux/Slices/cartSlice.js'
+import { getBooks } from "../apiCalls.js"
 import Book from "./Book.jsx"
 
 const BestSelling = () => {
@@ -37,20 +38,7 @@ const BestSelling = () => {
 	// 	console.log(event.target.value)
 	// }
 	useEffect(() => { 
-		const getBooks = async() => {
-			try {
-				const response = await axios.get('https://my-book-store-1oki.onrender.com/api/v1/books/getAllBooks')
-				if (response.status === 200 || res.statusText === 'OK') {
-					setBooks(response.data.data)
-					console.log({books})
-				}
-			} catch(error) {
-				if (error || !res.status === 200 || !res.statusText === 'OK') {
-					console.log(error)
-				}
-			}
-		}
-		getBooks()
+		getBooks(setBooks)
 	}, [])
 	return (
 		<section className="flex flex-col bg-red-50">

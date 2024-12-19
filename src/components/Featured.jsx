@@ -1,24 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import { FaStar, FaStarHalfStroke } from "react-icons/fa6"
+import { getBooks } from "../apiCalls.js"
 import axios from 'axios'
 
 const Featured = () => {
 	const [books, setBooks] = useState([])
 	// const 
 	useEffect(() => {
-		const getBooks = async() => {
-			try {
-				const response = await axios.get('https://my-book-store-1oki.onrender.com/api/v1/books/getAllBooks')
-				if (response.status === 200) {
-					setBooks(response.data.data)
-				}
-			} catch(error) {
-				if (error || !res.status === 200 || !res.statusText === 'OK') {
-					console.log(error)
-				}
-			}
-		}
-		getBooks()
+		getBooks(setBooks)
 	}, [])
 	return (
 		<section className="h-auto lg:h-[66vh] w-4/5 mx-auto my-24">
