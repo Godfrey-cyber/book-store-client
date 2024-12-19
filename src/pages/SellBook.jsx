@@ -41,10 +41,7 @@ const SellBook = () => {
         setBookData(prev => ({...prev, [event.target.name]: event.target.value}))
     }
     console.log(bookData)
-
-    // const = { title, price, photo, isbn, year, pages, discount, inStock, desc, language, condition, author, catId, catName } = info
-    // console.log(info)
- 	// category fetch
+    
  	useEffect(() => {
  		getCategories()
  	},[])

@@ -26,29 +26,7 @@ const Login = () => {
     const togglePassword = () => {
     	setToggle(prev => !prev)
     }
-    const handleSubmit = async (event) => {
-        event.preventDefault()
-        dispatch(loginStart())
-        if (!email == "" || !password == "") {
-			try {
-				const res = await axios.post("https://my-book-store-1oki.onrender.com/api/v1/users/login", formData, { withCredentials: true })
-				if (res.status === 200 || res.statusText === 'OK') {
-					dispatch(loginSuccess(res.data))
-					setFormData({email: "", password: ""})
-           			navigate('/')
-           			toast.success("Successfully Logged in🥇")
-				}
-			} catch (err) {
-				if (err || !res.status === 200 || !res.statusText === 'OK') {
-					dispatch(loginFailure(err?.response?.data.msg))
-					setFormData({email: "", password: ""})
-					toast.error(err?.response?.data?.msg)
-				}
-			}
-        } else {
-    		toast.error('Soory! • Cannot log you without credentials')
-    	}
-    } 
+    handleSubmit(event, dispatch, loginSuccess, email, password, formData, setFormData, navigate, loginStart, loginStart)
     const user = useSelector(selectUser)
     const userError = useSelector(loginError) || errorMessage
     const { isFetching, error, errMsg } = useSelector(state => state.user)
